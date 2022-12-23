@@ -7,87 +7,87 @@ drop table member;
 drop table reviews;
 
 CREATE TABLE movie(
-	movieNo number primary key, --¿µÈ­ ¹øÈ£
-	movieName VARCHAR2(20), --¿µÈ­ Á¦¸ñ
-	category number, --Àå¸£
-	runtime number, --120ºĞ
-	img VARCHAR2(50), --ÀÌ¹ÌÁö ÆÄÀÏ ºÒ·¯¿À±â À§ÇÑ Á¦¸ñ
-	info VARCHAR2(200) --¿µÈ­ Á¤º¸
+	movieNo number primary key, --ì˜í™” ë²ˆí˜¸
+	movieName VARCHAR2(20), --ì˜í™” ì œëª©
+	category number, --ì¥ë¥´
+	runtime number, --120ë¶„
+	img VARCHAR2(50), --ì´ë¯¸ì§€ íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸° ìœ„í•œ ì œëª©
+	info VARCHAR2(200) --ì˜í™” ì •ë³´
 );
 
-INSERT INTO movie VALUES(10000, '¾îº¥Àú½º', 01, 120, '1.jpg', 'Àç¹Õ´Ù');
-INSERT INTO movie VALUES(10001, '³ëÆÃÈú', 02, 120, '2.jpg', '°¨µ¿ÀûÀÌ´Ù');
-INSERT INTO movie VALUES(10002, '¾ÆÀÌ¾ğ¸Ç', 01, 120, '3.jpg', '¸ÚÀÖ´Ù');
-INSERT INTO movie VALUES(10003, '°Ü¿ï¿Õ±¹2', 05, 130, '4.jpg', 'Àç¹Õ´Ù');
-INSERT INTO movie VALUES(10004, '¿¢½ÃÆ®', 03, 140, '5.jpg', 'Å³¸µÅ¸ÀÓ');
-INSERT INTO movie VALUES(10005, '¹İµµ', 04, 155, '6.jpg', 'Àß»ı°å´Ù');
-INSERT INTO movie VALUES(10006, '23¾ÆÀÌµ§Æ¼µğ', 04, 150, '7.jpg', '²ÜÀë');
+INSERT INTO movie VALUES(10000, 'ì–´ë²¤ì €ìŠ¤', 01, 120, '1.jpg', 'ì¬ë°Œë‹¤');
+INSERT INTO movie VALUES(10001, 'ë…¸íŒ…í', 02, 120, '2.jpg', 'ê°ë™ì ì´ë‹¤');
+INSERT INTO movie VALUES(10002, 'ì•„ì´ì–¸ë§¨', 01, 120, '3.jpg', 'ë©‹ìˆë‹¤');
+INSERT INTO movie VALUES(10003, 'ê²¨ìš¸ì™•êµ­2', 05, 130, '4.jpg', 'ì¬ë°Œë‹¤');
+INSERT INTO movie VALUES(10004, 'ì—‘ì‹œíŠ¸', 03, 140, '5.jpg', 'í‚¬ë§íƒ€ì„');
+INSERT INTO movie VALUES(10005, 'ë°˜ë„', 04, 155, '6.jpg', 'ì˜ìƒê²¼ë‹¤');
+INSERT INTO movie VALUES(10006, '23ì•„ì´ë´í‹°ë””', 04, 150, '7.jpg', 'ê¿€ì¼');
 
 CREATE TABLE MEMBER(
-	id VARCHAR2(20) PRIMARY KEY, --¾ÆÀÌµğ
-	pw VARCHAR2(20), --ºñ¹Ğ¹øÈ£
-	email VARCHAR2(50), --ÀÌ¸ŞÀÏ
-	tel VARCHAR2(20), --ÀüÈ­¹øÈ£
-	birth DATE --»ı³â¿ùÀÏ
+	id VARCHAR2(20) PRIMARY KEY, --ì•„ì´ë””
+	pw VARCHAR2(20), --ë¹„ë°€ë²ˆí˜¸
+	email VARCHAR2(50), --ì´ë©”ì¼
+	tel VARCHAR2(20), --ì „í™”ë²ˆí˜¸
+	birth DATE --ìƒë…„ì›”ì¼
 );
 
 insert into member values('test','1234','test@test.com','010-1234-1234','2002-05-12');
 
-CREATE TABLE SCHEDULE( --»ó¿µ°ü(ROOM) --°ü¶÷½Ã°£ ¿µÈ­°üÀÌ¶û ¿¬°áÇØÁÖ´Â Å×ÀÌºí
-	schNo NUMBER PRIMARY KEY, --½ºÄÉÁÙ ¹øÈ£
+CREATE TABLE SCHEDULE( --ìƒì˜ê´€(ROOM) --ê´€ëŒì‹œê°„ ì˜í™”ê´€ì´ë‘ ì—°ê²°í•´ì£¼ëŠ” í…Œì´ë¸”
+	schNo NUMBER PRIMARY KEY, --ìŠ¤ì¼€ì¤„ ë²ˆí˜¸
 	movieName varchar2(20),
-    movieNo NUMBER, -- ¿µÈ­ ¹øÈ£
-	runDay DATE, --»ó¿µ ³¯Â¥
-	runtime NUMBER, --»ó¿µ ½Ã°£ : ¸îºĞÂ¥¸® ¿µÈ­ÀÎÁö
-	roomNo NUMBER, -- »ó¿µ°ü ¹øÈ£
+    movieNo NUMBER, -- ì˜í™” ë²ˆí˜¸
+	runDay DATE, --ìƒì˜ ë‚ ì§œ
+	runtime NUMBER, --ìƒì˜ ì‹œê°„ : ëª‡ë¶„ì§œë¦¬ ì˜í™”ì¸ì§€
+	roomNo NUMBER, -- ìƒì˜ê´€ ë²ˆí˜¸
     CONSTRAINT FK_movieNo foreign key(movieNo) REFERENCES movie(movieNo)
 );
 
-insert into schedule values(1, '¾îº¥Àú½º',10000,TO_DATE('2022/07/29 11:50','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(2, '¾îº¥Àú½º',10000,TO_DATE('2022/07/29 13:50','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(3, '¾îº¥Àú½º',10000,TO_DATE('2022/07/29 15:10','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(4, '¾îº¥Àú½º',10000,TO_DATE('2022/07/29 20:50','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(5, '¾îº¥Àú½º',10000,TO_DATE('2022/07/29 21:50','yyyy/mm/dd hh24:mi'),120,1);
+insert into schedule values(1, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 11:50','yyyy/mm/dd hh24:mi'),120,1);
+insert into schedule values(2, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 13:50','yyyy/mm/dd hh24:mi'),120,1);
+insert into schedule values(3, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 15:10','yyyy/mm/dd hh24:mi'),120,1);
+insert into schedule values(4, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 20:50','yyyy/mm/dd hh24:mi'),120,1);
+insert into schedule values(5, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 21:50','yyyy/mm/dd hh24:mi'),120,1);
 
-insert into schedule values(6, '¾ÆÀÌ¾ğ¸Ç',10002,TO_DATE('2022/08/01 11:50','yyyy/mm/dd hh24:mi'),120,2);
-insert into schedule values(7, '¾ÆÀÌ¾ğ¸Ç',10002,TO_DATE('2022/08/01 14:50','yyyy/mm/dd hh24:mi'),120,2);
-insert into schedule values(8, '¾ÆÀÌ¾ğ¸Ç',10002,TO_DATE('2022/08/01 17:00','yyyy/mm/dd hh24:mi'),120,2);
-insert into schedule values(9, '¾ÆÀÌ¾ğ¸Ç',10002,TO_DATE('2022/08/01 20:50','yyyy/mm/dd hh24:mi'),120,2);
+insert into schedule values(6, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 11:50','yyyy/mm/dd hh24:mi'),120,2);
+insert into schedule values(7, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 14:50','yyyy/mm/dd hh24:mi'),120,2);
+insert into schedule values(8, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 17:00','yyyy/mm/dd hh24:mi'),120,2);
+insert into schedule values(9, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 20:50','yyyy/mm/dd hh24:mi'),120,2);
 
-insert into schedule values(10, '³ëÆÃÈú',10001,TO_DATE('2022/07/29 09:50','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(11, '³ëÆÃÈú',10001,TO_DATE('2022/07/29 12:30','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(12, '³ëÆÃÈú',10001,TO_DATE('2022/07/29 15:50','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(13, '³ëÆÃÈú',10001,TO_DATE('2022/07/29 18:00','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(14, '³ëÆÃÈú',10001,TO_DATE('2022/07/29 21:30','yyyy/mm/dd hh24:mi'),120,3);
+insert into schedule values(10, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 09:50','yyyy/mm/dd hh24:mi'),120,3);
+insert into schedule values(11, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 12:30','yyyy/mm/dd hh24:mi'),120,3);
+insert into schedule values(12, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 15:50','yyyy/mm/dd hh24:mi'),120,3);
+insert into schedule values(13, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 18:00','yyyy/mm/dd hh24:mi'),120,3);
+insert into schedule values(14, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 21:30','yyyy/mm/dd hh24:mi'),120,3);
 
-insert into schedule values(15, '°Ü¿ï¿Õ±¹2',10003,TO_DATE('2022/07/29 10:00','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(16, '°Ü¿ï¿Õ±¹2',10003,TO_DATE('2022/07/29 12:40','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(17, '°Ü¿ï¿Õ±¹2',10003,TO_DATE('2022/07/29 15:00','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(18, '°Ü¿ï¿Õ±¹2',10003,TO_DATE('2022/07/29 18:30','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(19, '°Ü¿ï¿Õ±¹2',10003,TO_DATE('2022/07/29 22:20','yyyy/mm/dd hh24:mi'),130,4);
+insert into schedule values(15, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 10:00','yyyy/mm/dd hh24:mi'),130,4);
+insert into schedule values(16, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 12:40','yyyy/mm/dd hh24:mi'),130,4);
+insert into schedule values(17, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 15:00','yyyy/mm/dd hh24:mi'),130,4);
+insert into schedule values(18, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 18:30','yyyy/mm/dd hh24:mi'),130,4);
+insert into schedule values(19, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 22:20','yyyy/mm/dd hh24:mi'),130,4);
 
-insert into schedule values(20, '¿¢½ÃÆ®',10004,TO_DATE('2022/07/29 09:30','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(21, '¿¢½ÃÆ®',10004,TO_DATE('2022/07/29 12:00','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(22, '¿¢½ÃÆ®',10004,TO_DATE('2022/07/29 14:20','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(23, '¿¢½ÃÆ®',10004,TO_DATE('2022/07/29 18:10','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(24, '¿¢½ÃÆ®',10004,TO_DATE('2022/07/29 23:00','yyyy/mm/dd hh24:mi'),140,5);
+insert into schedule values(20, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 09:30','yyyy/mm/dd hh24:mi'),140,5);
+insert into schedule values(21, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 12:00','yyyy/mm/dd hh24:mi'),140,5);
+insert into schedule values(22, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 14:20','yyyy/mm/dd hh24:mi'),140,5);
+insert into schedule values(23, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 18:10','yyyy/mm/dd hh24:mi'),140,5);
+insert into schedule values(24, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 23:00','yyyy/mm/dd hh24:mi'),140,5);
 
-insert into schedule values(25, '¹İµµ',10005,TO_DATE('2022/07/29 09:40','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(26, '¹İµµ',10005,TO_DATE('2022/07/29 12:50','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(27, '¹İµµ',10005,TO_DATE('2022/07/29 16:20','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(28, '¹İµµ',10005,TO_DATE('2022/07/29 19:50','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(29, '¹İµµ',10005,TO_DATE('2022/07/29 23:10','yyyy/mm/dd hh24:mi'),155,6);
+insert into schedule values(25, 'ë°˜ë„',10005,TO_DATE('2022/07/29 09:40','yyyy/mm/dd hh24:mi'),155,6);
+insert into schedule values(26, 'ë°˜ë„',10005,TO_DATE('2022/07/29 12:50','yyyy/mm/dd hh24:mi'),155,6);
+insert into schedule values(27, 'ë°˜ë„',10005,TO_DATE('2022/07/29 16:20','yyyy/mm/dd hh24:mi'),155,6);
+insert into schedule values(28, 'ë°˜ë„',10005,TO_DATE('2022/07/29 19:50','yyyy/mm/dd hh24:mi'),155,6);
+insert into schedule values(29, 'ë°˜ë„',10005,TO_DATE('2022/07/29 23:10','yyyy/mm/dd hh24:mi'),155,6);
 
-insert into schedule values(30, '23¾ÆÀÌµ§Æ¼µğ',10006,TO_DATE('2022/07/29 08:10','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(31, '23¾ÆÀÌµ§Æ¼µğ',10006,TO_DATE('2022/07/29 11:10','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(32, '23¾ÆÀÌµ§Æ¼µğ',10006,TO_DATE('2022/07/29 15:00','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(33, '23¾ÆÀÌµ§Æ¼µğ',10006,TO_DATE('2022/07/29 18:30','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(34, '23¾ÆÀÌµ§Æ¼µğ',10006,TO_DATE('2022/07/29 23:00','yyyy/mm/dd hh24:mi'),150,7);
+insert into schedule values(30, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 08:10','yyyy/mm/dd hh24:mi'),150,7);
+insert into schedule values(31, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 11:10','yyyy/mm/dd hh24:mi'),150,7);
+insert into schedule values(32, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 15:00','yyyy/mm/dd hh24:mi'),150,7);
+insert into schedule values(33, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 18:30','yyyy/mm/dd hh24:mi'),150,7);
+insert into schedule values(34, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 23:00','yyyy/mm/dd hh24:mi'),150,7);
 
 
 
-CREATE TABLE ROOM( --»ó¿µ°ü
-    roomNo NUMBER primary key --»ó¿µ°ü ¹øÈ£
+CREATE TABLE ROOM( --ìƒì˜ê´€
+    roomNo NUMBER primary key --ìƒì˜ê´€ ë²ˆí˜¸
 );
 
 insert into room values(1);
@@ -148,13 +148,13 @@ insert into Dayroom values(7,34,0);
 
 
 CREATE TABLE TICKET(
-	ticketNo NUMBER PRIMARY KEY, --Æ¼ÄÏ ¹øÈ£
-	movieName varchar2(20), -- ¿µÈ­ ÀÌ¸§
-	bookDate DATE, -- »ó¿µÇÏ´Â ³¯Â¥
-	schNo NUMBER, --½ºÄÉÁÙ ¹øÈ£
-	roomNo number, --»ó¿µ°ü
-	seatNo NUMBER, --³»°¡ ¼±ÅÃÇÑ ÁÂ¼® ¹øÈ£
-	id VARCHAR2(20) --È¸¿ø¾ÆÀÌµğ
+	ticketNo NUMBER PRIMARY KEY, --í‹°ì¼“ ë²ˆí˜¸
+	movieName varchar2(20), -- ì˜í™” ì´ë¦„
+	bookDate DATE, -- ìƒì˜í•˜ëŠ” ë‚ ì§œ
+	schNo NUMBER, --ìŠ¤ì¼€ì¤„ ë²ˆí˜¸
+	roomNo number, --ìƒì˜ê´€
+	seatNo NUMBER, --ë‚´ê°€ ì„ íƒí•œ ì¢Œì„ ë²ˆí˜¸
+	id VARCHAR2(20) --íšŒì›ì•„ì´ë””
 );
 create table reviews(
     num number(8) default 0,
@@ -167,8 +167,6 @@ create table reviews(
 
 commit;
 
-
-SELECT * FROM member;
 SELECT * FROM dayroom;
 SELECT * FROM movie;
 select * from room;
