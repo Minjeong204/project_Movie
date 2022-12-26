@@ -66,6 +66,7 @@ a,ul,li {list-style: none;}
 body {
   font: normal 12px/1.5em "nanum", sans-serif;
   color: #333333;
+  zoom:1.1;
 }
 a {
   color: #333333;
@@ -94,9 +95,9 @@ a {
 }
 .bg {
   position: absolute;
-  left: 33%;
+  left: 35%;
   top: 60px;
-  width: 455px;
+  width: 465px;
   height: 200px;
   background-color: #ffffff;
   z-index: 15;
