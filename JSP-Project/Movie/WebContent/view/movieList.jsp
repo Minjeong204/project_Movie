@@ -73,7 +73,7 @@
 							break;
 					}
 			%>
-                <div class="card" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>';">
+                <%-- <div class="card" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>';">
                     <div class="image">
                         <img src="/images/<%=vo.getImg()%>">
                     </div>
@@ -100,7 +100,43 @@
                             No: <%=vo.getMovieNo() %>
                         </span>
                     </div>
-                </div>
+                </div> --%>
+                <div class="movie-card">
+		<div class="movie-header avengers">
+			<div class="header-icon-container">
+				<a href="#">
+				
+				</a>
+				
+			</div>
+			
+		</div><!--movie-header-->
+		
+		<div class="movie-content" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>'";>
+		
+			<div class="movie-content-header">
+			<img alt="" src="<%=vo.getImg()%>">
+				<a href="#">
+					<h3 class="movie-title"><%=vo.getMovieName() %></h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>장르</label>
+					<span><%=cat %>	</span>
+				</div><!--date,time-->
+				<div class="info-section">
+					<label>상영시간</label>
+					<span><%=vo.getRuntime() %></span>
+				</div><!--screen-->
+				<div class="info-section">
+					<label>영화번호</label>
+					<span><%=vo.getMovieNo() %></span>
+				</div><!--row-->
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
             <% } %>
             </div>
         </div>

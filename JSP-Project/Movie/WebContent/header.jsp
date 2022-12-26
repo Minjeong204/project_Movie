@@ -76,27 +76,30 @@ if (user != null) {
 			} else {
 			%>
 
+			<div class="right item">
+				<p style="margin: 0 15px;"><%=user.getId()%>님
+				</p>
+				<div class="ui primary button"
+					onclick="location.href = '/view/myTickets.jsp';">마이페이지</div>
+			</div>
+
+			<div class="item">
+				<div class="ui button"
+					onclick="swal('Success', '로그아웃 성공', 'success').then((val) => {location.href = '/view/logout.jsp';});">로그아웃</div>
+			</div>
+
+			<%
+			}
+			} else {
+			%>
 			<ul class="quick">
-				<li onclick="location.href = '/view/register.jsp';"><%=user.getId()%>님</li>
-				<li onclick="location.href = '/view/myTickets.jsp';">마이페이지</li>
-
-				<li
-onclick="swal('Success', '로그아웃 성공', 'success').then((val) => {location.href = '/view/logout.jsp';});">로그아웃
-	</li>
-
-
-	<%
-	}
-	} else {
-	%>
-	<ul class="quick">
-		<li onclick="location.href = '/view/register.jsp';">회원가입</li>
-		<li onclick="location.href = '/view/login.jsp';">로그인</li>
-	</ul>
-	<%
-	}
-	%>
-
+				<li onclick="location.href = '/view/register.jsp';">회원가입</li>
+				<li onclick="location.href = '/view/login.jsp';">로그인</li>
+			</ul>
+			<%
+			}
+			%>
+		
 	</div>
 	</header>
 	</div>
