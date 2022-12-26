@@ -39,10 +39,11 @@ if (user != null) {
 					<!-- 이용안내-->
 					<li data-n="2"><a href="#">장르별 영화</a>
 						<ul class="sub">
-							<li><a href="#">액션</a></li>
-							<li><a href="#">로맨스</a></li>
-							<li><a href="#">공포</a></li>
-							<li><a href="#">애니메이션</a></li>
+							<li><a href="/movieList.do?cat_no=1">액션</a></li>
+							<li><a href="/movieList.do?cat_no=2">로맨스</a></li>
+							<li><a href="/movieList.do?cat_no=3">공포</a></li>
+							<li><a href="/movieList.do?cat_no=4">스릴러</a></li>
+							<li><a href="/movieList.do?cat_no=5">애니메이션</a></li>
 						</ul></li>
 					<!-- 전시-->
 					<li data-n="3"><a href="#">리뷰</a> <!-- 프로그램--> <!-- 나만의 페이지-->
@@ -124,24 +125,7 @@ if (user != null) {
 		      $(this).stop().slideUp();
 		      $(".sub").stop().slideUp();
 		    });
-		  $("#menu > li").hover(function () {
-		    var bgImg = $(this).attr("data-n");
-		    $(".bg").css("background-image", "url(images/hybg" + bgImg + ".jpg)");
-		  });
-		  $(".lang_li > ul").hide();
-		  var show = false;
-		  $(".lang_li").click(function () {
-		    show != show;
-		    if (show == true) {
-		      $(".lang_li").children("ul").show();
-		      $(".lang_li > a").css("color", "red");
-		      $(".lang_li > span").text("▲").css("color", "red");
-		    } else {
-		      $(".lang_li").children("ul").hide();
-		      $(".lang_li > a").css("color", "");
-		      $(".lang_li > span").text("▼").css("color", "");
-		    }
-		  });
+
 		});
 
 	</script>
