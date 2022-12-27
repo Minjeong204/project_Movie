@@ -13,11 +13,7 @@
 %>
 
 <div class="ui container">
-	<div class="visual">
-		<img src="/images/logo.jpg" alt="visualImg">
-	</div>
 
-	<div class="main">
 		<h2>회원가입</h2>
 
 		<form class="ui form" action="/registerController.do" method="POST">

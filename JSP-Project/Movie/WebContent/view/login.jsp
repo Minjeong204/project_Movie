@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp"%>
+<link rel="stylesheet" href="/lib/style.css">
 
 <%
 if (request.getAttribute("error") != null) {
@@ -13,7 +14,7 @@ if (request.getAttribute("error") != null) {
 <div class="ui container">
 
 
-	<div class="main">
+
 
 	<!-- 	<h2>로그인</h2> -->
 		<form class="ui form" action="/loginController.do" method="POST">
