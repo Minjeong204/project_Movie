@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/*애플티비 자동슬라이드 전체*/
+
 #appletv_post{
   clear:both;
   width:100%;
@@ -10,7 +10,7 @@
   margin-left:auto;
   margin-right:auto;
 }
-/* js 클릭시 이미지변경 */
+
 #appletv_post.bg1{
   background-color: #6ba23d;
 }
@@ -29,7 +29,7 @@
 #appletv_post.bg6{
   background-color: #f8a522;
 }
-/*버튼종합모음*/
+
 .appletv_post_con{
   width:1000px;
   height:388px;
@@ -37,7 +37,7 @@
   position:relative;
   z-index:5;
 }
-/* 애플티비 포스터 */
+
 #atv_p{
   width:686px;
   height:100%;
@@ -54,7 +54,7 @@
   float:left;
   text-align: center;
 }
-/*애플티비 로고*/
+
 .appletv_post_abridg h1:nth-of-type(1){
   position:absolute;
   left:0;
@@ -73,7 +73,7 @@
   top:90px;
   font-size:20px;
 }
-/* One 번들에 포함*/
+
 .appletv_post_abridg h1:nth-of-type(3){
   position:absolute;
   left:166px;
@@ -85,7 +85,7 @@
   border-radius:30px;
   text-indent:27px;
 }
-/* 수상에 빛나는... */
+
 .appletv_post_abridg h1:nth-of-type(4){
   position:absolute;
   left:0;
@@ -93,7 +93,7 @@
   font-size:30px;
   line-height:35px;
 }
-/*무료 체험하기*/
+
 .appletv_post_abridg p:nth-of-type(1){
   position:absolute;
   left:0;
@@ -116,7 +116,7 @@
   background-color:#999;
   text-decoration:underline;
 }
-/*더 알아보기*/
+
 .appletv_post_abridg p:nth-of-type(2){
   position:absolute;
   left:150px;
@@ -141,7 +141,7 @@
   background-color:rgba(8,110,49,0.1);
   background-color:#999;
 }
-/*Apple TV 앱에서 시청하기*/
+
 .appletv_post_abridg p:nth-of-type(3){
   position:absolute;
   top:268px;
@@ -152,7 +152,7 @@
   padding-bottom:4px;
   border-bottom:1px solid #fff;
 }
-/*화살표 / 버튼 */
+
 .prev,.next{
   position:absolute;
   cursor:pointer;
@@ -164,7 +164,7 @@
   top:55%;
   transform:translate(0,-50%);
 }
-/*다음화살표*/
+
 .next {
   right:18%;
   top:55%;

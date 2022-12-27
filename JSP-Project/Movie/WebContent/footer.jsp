@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="/lib/style.css">
+<link rel="stylesheet" href="/lib/style.css?after">
 <div id="bottom_wrap">
     <footer id="bottom">
       <ul>
@@ -14,9 +14,9 @@
         <li><a href="#">이메일주소 수집거부</a></li>
         <li><a href="#">원격연결</a></li>
       </ul>
-      <address>
+      <address class="add">
         TEL:(02)2124-3114<br />
-        07242 경기도 안산시 상록구 
+        <span class="add_sub">07242 경기도 안산시 상록구</span>
       </address>
       <p>Copyright &copy; 2014 KBIZ All rights Reserved.</p>
     </footer>

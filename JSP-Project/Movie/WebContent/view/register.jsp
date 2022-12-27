@@ -15,37 +15,34 @@ if (request.getAttribute("regID") != null) {
 %>
 
 <div class="ui container">
-	<div class="reg_vis">
-		<h2>회원가입</h2>
-	</div>
-
-
+	<h2 class="join_title">회원가입</h2>
 	<form class="ui form" id="reg_box"  action="/registerController.do" method="POST">
+		
 		<div class="field">
 			<label>아이디</label> <input type="text" name="userId" id="userId"
-				placeholder="아이디를 입력해주세요">
+				placeholder="아이디 입력">
 		</div>
 
 		<div class="two fields">
 			<div class="field">
 				<label>비밀번호</label> <input type="password" name="userPW" id="userPW"
-					placeholder="비밀번호를 입력해주세요">
+					placeholder="비밀번호 입력">
 			</div>
 
 			<div class="field">
 				<label>비밀번호 확인</label> <input type="password" name="userRePW"
-					id="userRePW" placeholder="비밀번호를 다시 입력해주세요">
+					id="userRePW" placeholder="비밀번호 재입력">
 			</div>
 		</div>
 
 		<div class="field">
 			<label>이메일</label> <input type="email" name="userEmail"
-				id="userEmail" placeholder="이메일 주소를 입력해주세요">
+				id="userEmail" placeholder="이메일 주소 입력">
 		</div>
 
 		<div class="field">
 			<label>전화번호</label> <input type="text" name="userPhone"
-				id="userPhone" placeholder="전화번호를 입력해주세요">
+				id="userPhone" placeholder="전화번호 입력">
 		</div>
 
 		<div class="field">

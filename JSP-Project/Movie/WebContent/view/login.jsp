@@ -15,7 +15,7 @@ if (request.getAttribute("error") != null) {
 <div class="ui container">
 	<!-- 	<h2>로그인</h2> -->
 	<div class="log_vis">
-	<h1>LOGIN</h1>
+	<h1>로 그 인 </h1>
 	<p>영화리뷰사이트에 오신걸 환영합니다.</p>
 	<hr>
 	</div>

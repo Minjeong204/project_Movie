@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page session="true" %>
-<link rel="stylesheet" href="/lib/list.css">
+<link rel="stylesheet" href="/lib/list.css?after">
  <script src="../lib/jquery-3.6.1.min.js"></script> 
 <script src="../lib/jquery-1.8.3.min.js"></script>
 <script src="../lib/jquery-ui-1.10.4.custom.min.js"></script>
@@ -164,14 +164,11 @@
 	$(document)
 			.ready(
 					function() {
-						// 상업적
-						//notice
 						
 						// 포스터 자동슬라이드
 						// var li_w = $(".atv li").width();
 						var w = 690 * $(".atv li").length + "px";
 						$(".atv").css("width", w);
-						// console.log(w);
 						$(".atv li:last").prependTo(".atv");
 						$(".atv").css("margin-left", "-690px");
 
@@ -238,7 +235,6 @@
 						$(".atv li").mouseover(function() {
 							clearInterval(banner);
 							$(this).find("img").css("opacity", "0.5");
-							// alert("멈췄나요"); 확인
 						}).mouseout(function() {
 							banner = setInterval("banner()", 3000);
 							$(this).find("img").css("opacity", "1.0");
@@ -246,7 +242,6 @@
 						$(".next").mouseover(function() {
 							clearInterval(banner);
 							$(this).find("img").css("opacity", "0.5");
-							// alert("멈췄나요"); 확인
 						}).mouseout(function() {
 							banner = setInterval("banner()", 3000);
 							$(this).find("img").css("opacity", "1.0");
@@ -254,13 +249,11 @@
 						$(".prev").mouseover(function() {
 							clearInterval(banner);
 							$(this).find("img").css("opacity", "0.5");
-							// alert("멈췄나요"); 확인
 						}).mouseout(function() {
 							banner = setInterval("banner()", 3000);
 							$(this).find("img").css("opacity", "1.0");
 						});
 
-						// SERIES LIFE IS GOOD
 						$(".s_se").mouseover(
 								function() {
 									$(this).attr("src",
@@ -317,8 +310,6 @@
 													.css("width", "151").css(
 															"height", "204");
 										});
-
-						// 보상판매 디스플레이부분 ViewMore
 
 					});
 </script>

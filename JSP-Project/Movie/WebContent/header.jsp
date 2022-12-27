@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>영화 예매</title>
-<link rel="stylesheet" href="/lib/style.css">
+<link rel="stylesheet" href="/lib/style.css?after">
 <link rel="stylesheet" type="text/css" href="/lib/semantic.min.css">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
 	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -107,7 +107,6 @@ if (user != null) {
 	$(document).ready(function () {
 		  //태그 추가
 		  $("#main_navi").before("<div class='bg'></div>");
-
 		  $(".bg,.sub").hide();
 		  $("#menu")
 		    .mouseenter(function () {
@@ -125,9 +124,7 @@ if (user != null) {
 		      $(this).stop().slideUp();
 		      $(".sub").stop().slideUp();
 		    });
-
 		});
-
 	</script>
 </body>
 </html>
