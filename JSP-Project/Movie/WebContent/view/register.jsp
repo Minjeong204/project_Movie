@@ -20,7 +20,7 @@ if (request.getAttribute("regID") != null) {
 	</div>
 
 
-	<form class="ui form" action="/registerController.do" method="POST">
+	<form class="ui form" id="reg_box"  action="/registerController.do" method="POST">
 		<div class="field">
 			<label>아이디</label> <input type="text" name="userId" id="userId"
 				placeholder="아이디를 입력해주세요">

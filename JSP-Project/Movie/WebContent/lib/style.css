@@ -7,13 +7,20 @@
 }
 
 a, ul, li {
-	list-style: none;	
+	list-style: none;
 }
- .reg_vis{
- }
-.reg_vis h2{
+
+#reg_box {
+	width:30%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.reg_vis h2 {
 	width: 115px;
+	margin-left:150px;
 }
+
 .log_vis {
 	width: 30%;
 	padding-top: 100px;
@@ -25,13 +32,15 @@ a, ul, li {
 	width: 100%;
 	text-align: center;
 }
-#loginBtn{
+
+#loginBtn {
 	width: 100%;
 	background-color: black;
 	margin-bottom: 100px;
 }
-#reg_btn{
-	width:206px;
+
+#reg_btn {
+	width: 206px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 60px;
