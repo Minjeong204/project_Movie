@@ -20,7 +20,6 @@
 %>
 
 <div class="ui container">
-    <div class="visual">
         <!-- <img src="./images/logo.jpg" alt="visualImg"> -->
        <div class="visual">
         <!-- <img src="./images/logo.jpg" alt="visualImg"> -->

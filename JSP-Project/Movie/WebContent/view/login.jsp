@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp"%>
+
 <link rel="stylesheet" href="/lib/style.css">
+<%@ include file="../header.jsp"%>
 
 <%
 if (request.getAttribute("error") != null) {
@@ -12,12 +13,13 @@ if (request.getAttribute("error") != null) {
 %>
 
 <div class="ui container">
-
-
-
-
 	<!-- 	<h2>로그인</h2> -->
-		<form class="ui form" action="/loginController.do" method="POST">
+	<div class="log_vis">
+	<h1>LOGIN</h1>
+	<p>영화리뷰사이트에 오신걸 환영합니다.</p>
+	<hr>
+	</div>
+		<form class="ui form reg_form" action="/loginController.do" method="POST">
 			<div class="field">
 				<label>아이디</label> <input type="text" name="userId" id="userId"
 					placeholder="아이디를 입력해주세요">
