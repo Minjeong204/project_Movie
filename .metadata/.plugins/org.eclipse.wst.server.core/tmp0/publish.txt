@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Tue Dec 27 21:45:25 KST 2022
-org.eclipse.jst.jee.server\:MovieMVC=C\:\\Users\\Yoo. MH\\Downloads\\apache-tomcat-9.0.70\\wtpwebapps\\MovieMVC

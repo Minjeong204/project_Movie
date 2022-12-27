@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+
+#appletv_post{
+  clear:both;
+  width:100%;
+  height:387px;
+  background-color:#000;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#appletv_post.bg1{
+  background-color: #6ba23d;
+}
+#appletv_post.bg2{
+  background-color: #0b2056;
+}
+#appletv_post.bg3{
+  background-color: #000000;
+}
+#appletv_post.bg4{
+  background-color: #a2d8b4;
+}
+#appletv_post.bg5{
+  background-color: #8d9d8a;
+}
+#appletv_post.bg6{
+  background-color: #f8a522;
+}
+
+.appletv_post_con{
+  width:1000px;
+  height:388px;
+  margin:0 auto;
+  position:relative;
+  z-index:5;
+}
+
+#atv_p{
+  width:686px;
+  height:100%;
+  overflow: hidden;
+  margin:0 auto;
+}
+.atv{
+  width:688px;
+  height:387px;
+}
+.atv li{
+  width:688px;
+  height:387px;
+  float:left;
+  text-align: center;
+}
+
+.appletv_post_abridg h1:nth-of-type(1){
+  position:absolute;
+  left:0;
+  top:80px;
+  width:35px;
+  height:35px;
+}
+.appletv_post_abridg h1:nth-of-type(1) img{
+  width:35px;
+  height:35px;
+}
+/* Apple TV+ */
+.appletv_post_abridg h1:nth-of-type(2){
+  position:absolute;
+  left:42px;
+  top:90px;
+  font-size:20px;
+}
+
+.appletv_post_abridg h1:nth-of-type(3){
+  position:absolute;
+  left:166px;
+  top:85px;
+  font-size:15px;
+  width:140px;
+  height:25px;
+  border:1px solid #fff;
+  border-radius:30px;
+  text-indent:27px;
+}
+
+.appletv_post_abridg h1:nth-of-type(4){
+  position:absolute;
+  left:0;
+  top:140px;
+  font-size:30px;
+  line-height:35px;
+}
+
+.appletv_post_abridg p:nth-of-type(1){
+  position:absolute;
+  left:0;
+  top:320px;
+  font-size:15px;
+  font-weight:bold;
+  width:120px;
+  height:40px;
+  line-height:41px;
+  text-align:center;
+  background-color:#666;
+  border-radius:40px;
+  letter-spacing:-1px;
+  cursor:pointer;
+}
+.appletv_post_abridg p:nth-of-type(1) a{
+  color:#eaeaea;
+}
+.appletv_post_abridg p:nth-of-type(1):hover{
+  background-color:#999;
+  text-decoration:underline;
+}
+
+.appletv_post_abridg p:nth-of-type(2){
+  position:absolute;
+  left:150px;
+  top:320px;
+  font-size:15px;
+  font-weight:bold;
+  width:120px;
+  height:40px;
+  line-height:41px;
+  text-align:center;
+  border-radius:40px;
+  background-color:#666;
+  cursor:pointer;
+  letter-spacing:-1px;
+}
+.appletv_post_abridg p:nth-of-type(2) a{
+  color:#eaeaea;
+  font-weight:bold;
+}
+.appletv_post_abridg p:nth-of-type(2):hover{
+  text-decoration:underline;
+  background-color:rgba(8,110,49,0.1);
+  background-color:#999;
+}
+
+.appletv_post_abridg p:nth-of-type(3){
+  position:absolute;
+  top:268px;
+  font-size:16px;
+  font-weight:bold;
+}
+.appletv_post_abridg p:nth-of-type(3):hover{
+  padding-bottom:4px;
+  border-bottom:1px solid #fff;
+}
+
+.prev,.next{
+  position:absolute;
+  cursor:pointer;
+  z-index:10;
+}
+/*이전화살표*/
+.prev {
+  left:18%;
+  top:55%;
+  transform:translate(0,-50%);
+}
+
+.next {
+  right:18%;
+  top:55%;
+  transform:translate(0,-50%);
+}
+
+.prev > img {
+	width: 33px;
+	height : 62px;
+}
+
+.next > img {
+	width: 33px;
+	height : 62px;
+}
