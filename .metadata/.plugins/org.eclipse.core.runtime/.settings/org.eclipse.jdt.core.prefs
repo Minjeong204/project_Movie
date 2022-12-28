@@ -1,8 +1,11 @@
 eclipse.preferences.version=1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=17
 org.eclipse.jdt.core.compiler.compliance=17

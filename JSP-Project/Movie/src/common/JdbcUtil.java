@@ -12,10 +12,14 @@ public class JdbcUtil {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 <<<<<<< HEAD
+<<<<<<< HEAD
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "bg", "bg");
 =======
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "javajsp", "12345");
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "1234");
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 			
 		} catch (Exception e) {
 			e.printStackTrace();

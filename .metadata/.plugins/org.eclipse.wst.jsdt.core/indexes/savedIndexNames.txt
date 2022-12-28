@@ -1,5 +1,8 @@
 INDEX VERSION 1.4+C:\ThisIsJavaSecondEdition\eclipse-workspace\project2_team2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 2023355341.index
 293762626.index
 4046630742.index
@@ -7,6 +10,7 @@ INDEX VERSION 1.4+C:\ThisIsJavaSecondEdition\eclipse-workspace\project2_team2\.m
 983592975.index
 423987766.index
 2212382022.index
+<<<<<<< HEAD
 =======
 423987766.index
 2914489262.index
@@ -16,3 +20,5 @@ INDEX VERSION 1.4+C:\ThisIsJavaSecondEdition\eclipse-workspace\project2_team2\.m
 983592975.index
 293762626.index
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

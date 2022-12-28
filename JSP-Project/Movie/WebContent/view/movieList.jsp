@@ -4,17 +4,23 @@
     pageEncoding="UTF-8"%>
 <%@ page session="true" %>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <link rel="stylesheet" href="/lib/list.css?after">
  <script src="../lib/jquery-3.6.1.min.js"></script> 
 <script src="../lib/jquery-1.8.3.min.js"></script>
 <script src="../lib/jquery-ui-1.10.4.custom.min.js"></script>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <%@ include file="../header.jsp" %>
 
 <%
 	ArrayList<MovieVO> list = new ArrayList<MovieVO>();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 	if(request.getAttribute("movieList") == null) {
 		response.sendRedirect("movieList.do");
 	}else {
@@ -23,6 +29,7 @@
 %>
 
 <div class="ui container">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div class="visual">
         <!-- <img src="./images/logo.jpg" alt="visualImg"> -->
@@ -52,6 +59,11 @@
     </div><!--#appletv_post/애플 광고 전체-->
      
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+    <div class="visual">
+        <!-- <img src="./images/logo.jpg" alt="visualImg"> -->
+        <video width="1120" height="630" src="video/movie.mp4" controls autoplay muted loop></video>
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
     </div>
 
     <div class="main">
@@ -82,21 +94,32 @@
 					}
 			%>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div class="card" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>';">
 =======
                 <%-- <div class="card" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>';">
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+                <div class="card" onclick="location.href = '/reviewList.do?movieNo=<%=vo.getMovieNo()%>';">
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
                     <div class="image">
                         <img src="/images/<%=vo.getImg()%>">
                     </div>
 
                     <div class="content"> 
                         <div class="header"><%=vo.getMovieName() %></div>
+<<<<<<< HEAD
 
                         <div class="meta">
                             <span class="date"><%=cat %></span>
                         </div>
 
+=======
+						
+                        <div class="meta">
+                            <span class="date"><%=cat %></span>
+                        </div>
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
                         <div class="description">
                         	<%=vo.getInfo() %>
                         </div>
@@ -112,6 +135,7 @@
                             No: <%=vo.getMovieNo() %>
                         </span>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
 =======
@@ -153,11 +177,15 @@
 		</div><!--movie-content-->
 	</div><!--movie-card-->
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+                </div>
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
             <% } %>
             </div>
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -334,4 +362,7 @@
 					});
 </script>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <%@ include file="../footer.jsp" %>

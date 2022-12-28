@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <%@page import="vo.MovieVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -83,6 +86,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <%@ include file="../footer.jsp" %>
 =======
 <%@page import="vo.ReviewVO"%>
@@ -170,3 +174,6 @@ if (request.getAttribute("movieList") == null) {
 
 <%@ include file="../footer.jsp"%>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+<%@ include file="../footer.jsp" %>
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

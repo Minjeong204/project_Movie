@@ -18,9 +18,17 @@ public class ReviewInsertController  implements Controller{
 		String id = req.getParameter("userId");
 		String txt = req.getParameter("txt");
 		int movieNo = Integer.parseInt(req.getParameter("movieNo"));
+<<<<<<< HEAD
 		
 		ReviewDAO instance = ReviewDAO.getInstance();
 		instance.insertReview(txt, id, movieNo);
+=======
+		String score = req.getParameter("score");
+		
+		
+		ReviewDAO instance = ReviewDAO.getInstance();
+		instance.insertReview(txt, id, movieNo, score);
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 		
 		String dis = "/reviewList.do?movieNo=" + movieNo;
 		req.getRequestDispatcher(dis).forward(req, resp);

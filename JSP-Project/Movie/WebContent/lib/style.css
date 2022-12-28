@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @font-face {
 	font-family: nanum;
@@ -11,11 +12,16 @@
 }
 
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 }
 
 a,ul,li {list-style: none;}
@@ -23,6 +29,7 @@ a,ul,li {list-style: none;}
 .visual img{
 	width: 100%;
 	height: 500px;
+<<<<<<< HEAD
 =======
 	transition: 300ms;
 	user-select: none;
@@ -221,12 +228,15 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 }
 
 .main {
 	margin: 40px 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .main h2 {
 	margin: 30px 0;
@@ -319,6 +329,11 @@ a:hover {
 .ticketing {
 	margin-top: 50px !important;
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+.main h2 {
+	margin: 30px 0;
+	text-align: center;
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 }
 
 .unit {
@@ -327,6 +342,7 @@ a:hover {
 	align-items: center;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 .review_main_img {
@@ -344,6 +360,8 @@ a:hover {
 }
 
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 .movieInfoBox {
 	display: flex;
 	justify-content: center;
@@ -351,10 +369,14 @@ a:hover {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .movieInfoBox .leftBox, .movieInfoBox .rightBox {
 =======
 .movieInfoBox .movieInfoBox .rightBox {
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+.movieInfoBox .leftBox, .movieInfoBox .rightBox {
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 	width: 50%;
 	padding: 10px;
 }
@@ -372,10 +394,14 @@ a:hover {
 
 .movieInfoBox .rightBox table tbody tr:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 	background: #1c94ef;
 	cursor: pointer;
 }
 
+<<<<<<< HEAD
 =======
 	background: #4d4d4d;
 	cursor: pointer;
@@ -436,6 +462,8 @@ a:hover {
 }
 
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 .seatBox button {
 	width: 150px;
 	height: 60px;
@@ -444,10 +472,14 @@ a:hover {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 footer {
 	background: #1B1C1D;
 	margin-top: 40px;
 	padding: 40px;
+<<<<<<< HEAD
 }
 =======
 #top_wrap {
@@ -655,3 +687,6 @@ footer {
 
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700');
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+}
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

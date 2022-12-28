@@ -1,5 +1,8 @@
 INDEX VERSION 1.131+C:\ThisIsJavaSecondEdition\eclipse-workspace\project2_team2\.metadata\.plugins\org.eclipse.jdt.core
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 737415950.index
 619297442.index
 524017658.index
@@ -43,6 +46,7 @@ INDEX VERSION 1.131+C:\ThisIsJavaSecondEdition\eclipse-workspace\project2_team2\
 855105942.index
 3535065171.index
 2758055146.index
+<<<<<<< HEAD
 =======
 2037185365.index
 2351973995.index
@@ -89,3 +93,5 @@ INDEX VERSION 1.131+C:\ThisIsJavaSecondEdition\eclipse-workspace\project2_team2\
 3678673672.index
 1360082895.index
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

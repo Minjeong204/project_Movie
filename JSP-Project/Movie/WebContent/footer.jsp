@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 
 <footer>
   <div class="ui inverted vertical footer segment">
@@ -34,6 +37,7 @@
   </div>
 </footer>
 
+<<<<<<< HEAD
 =======
 <link rel="stylesheet" href="/lib/style.css?after">
 <div id="bottom_wrap">
@@ -57,5 +61,7 @@
     </footer>
   </div>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 </body>
 </html>

@@ -1,10 +1,14 @@
 <%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
     pageEncoding="UTF-8"%>
 =======
 	pageEncoding="UTF-8"%>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+    pageEncoding="UTF-8"%>
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
@@ -13,6 +17,9 @@
 <meta charset="UTF-8">
 <title>영화 예매</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <link rel="stylesheet" href="/lib/style.css">
 <link rel="stylesheet" type="text/css" href="/lib/semantic.min.css">
 <script
@@ -33,6 +40,7 @@
 	}
 %>
 
+<<<<<<< HEAD
 =======
 <link rel="stylesheet" href="/lib/style.css?after">
 <link rel="stylesheet" type="text/css" href="/lib/semantic.min.css">
@@ -53,11 +61,16 @@ if (user != null) {
 }
 %>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 
 
 <body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <div class="ui container">
 	<header>		
 		<div class="ui menu">
@@ -134,6 +147,7 @@ if (user != null) {
 %>
 		</div>
 	</header>
+<<<<<<< HEAD
 </div>
 =======
 	<div class="ui container">
@@ -241,3 +255,6 @@ if (user != null) {
 </body>
 </html>
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+</div>
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

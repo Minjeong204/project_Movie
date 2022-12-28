@@ -780,6 +780,7 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !ENTRY org.eclipse.jst.jsp.core 4 4 2022-12-22 01:11:40.653
 !MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 !SESSION 2022-12-26 20:16:10.777 -----------------------------------------------
 eclipse.buildId=4.25.0.I20220831-1800
@@ -1669,3 +1670,5 @@ java.lang.IllegalStateException: Registry Directory not available: C:\Users\Yoo.
 	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$1.run(AutomaticUpdateScheduler.java:76)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

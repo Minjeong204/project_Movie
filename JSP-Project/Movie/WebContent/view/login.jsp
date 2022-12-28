@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 <%@ include file="../header.jsp"%>
 
 <%
@@ -32,6 +35,7 @@
 			</div>
 
 			<div class="field" style="display: flex; justify-content: flex-end; margin-top: 30px;">
+<<<<<<< HEAD
 =======
 
 <link rel="stylesheet" href="/lib/style.css">
@@ -66,6 +70,8 @@ if (request.getAttribute("error") != null) {
 			<div class="field"
 				style="display: flex; justify-content: flex-end; margin-top: 30px;">
 >>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
+=======
+>>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 				<button type="button" class="ui primary button right" id="loginBtn">로그인</button>
 				<input type="submit" id="loginSubmit" style="display: none;">
 			</div>
