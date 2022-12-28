@@ -25,11 +25,6 @@ public class RegisterController implements Controller {
 		Date userBirth = Date.valueOf(req.getParameter("userBirth"));
 		
 		//관리자 아이디인 admin 으로 회원가입 제한하기
-		if(userId == "admin") {
-			req.setAttribute("error", "관리자 아이디인 admin으로는 가입하실 수 없습니다.");
-			req.getRequestDispatcher("/view/register.jsp").forward(req, resp);
-			return;
-		}
 
 		// 유효성 체크
 		if (userId.isEmpty() || userPW.isEmpty() || userRePW.isEmpty() || userEmail.isEmpty() || userPhone.isEmpty() || userBirth == null) {

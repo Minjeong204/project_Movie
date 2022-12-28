@@ -21,7 +21,6 @@ public class MovieInfoController implements Controller {
 			MovieDAO instance = MovieDAO.getInstance();
 			//선택한 영화의 정보를 받아옴
 			MovieVO movieInfo = instance.movieInfo(movieNo);
-			//선택한 영화의 상영시간 스케줄을 받아옴
 			
 			int like_ = instance.updateLike(movieNo);
 			
