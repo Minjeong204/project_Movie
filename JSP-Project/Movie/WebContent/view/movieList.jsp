@@ -7,7 +7,6 @@
 
 <%
 	ArrayList<MovieVO> list = new ArrayList<MovieVO>();
-
 	if(request.getAttribute("movieList") == null) {
 		response.sendRedirect("movieList.do");
 	}else {
@@ -48,18 +47,17 @@
 							break;
 					}
 			%>
-                <div class="card" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>';">
+                <div class="card" onclick="location.href = '/reviewList.do?movieNo=<%=vo.getMovieNo()%>';">
                     <div class="image">
                         <img src="/images/<%=vo.getImg()%>">
                     </div>
 
                     <div class="content"> 
                         <div class="header"><%=vo.getMovieName() %></div>
-
+						
                         <div class="meta">
                             <span class="date"><%=cat %></span>
                         </div>
-
                         <div class="description">
                         	<%=vo.getInfo() %>
                         </div>

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.MovieDAO;
 import vo.MovieVO;
-import vo.ScheduleVO;
 
 public class MovieInfoController implements Controller {
 
@@ -23,11 +22,12 @@ public class MovieInfoController implements Controller {
 			//선택한 영화의 정보를 받아옴
 			MovieVO movieInfo = instance.movieInfo(movieNo);
 			//선택한 영화의 상영시간 스케줄을 받아옴
-			ArrayList<ScheduleVO> scheduleAList = instance.scheduleAList(movieNo);
 			
-			if(scheduleAList != null) {
+			int like_ = instance.updateLike(movieNo);
+			
+			if(movieInfo != null) {
 				req.setAttribute("movieInfo", movieInfo);
-				req.setAttribute("scheduleAList", scheduleAList);
+				req.setAttribute("like_", like_);
 				req.getRequestDispatcher("/view/movieInfo.jsp").forward(req, resp);	
 			}
 		}		

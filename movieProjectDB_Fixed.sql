@@ -173,3 +173,5 @@ select * from room;
 select * from schedule;
 select * from ticket;
 select * from reviews;
+select * from member;
+

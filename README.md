@@ -1,6 +1,6 @@
 # project_bookrec 📔
 
- ## 💡 `JSP` PROJECT <img src="https://img.shields.io/badge/Java-17-pink"> <img src="https://img.shields.io/badge/JSP-2.3-hotpink"> <img src="https://img.shields.io/badge/Servlet-4.0-skyblue"> <img src="https://img.shields.io/badge/Tomcat-9.0.70-yellow"> <img src="https://img.shields.io/badge/Oracle-11.2.0.2.0-red">
+ ## 💡 `JSP` PROJECT <img src="https://img.shields.io/badge/Java-11-pink"> <img src="https://img.shields.io/badge/JSP-2.3-hotpink"> <img src="https://img.shields.io/badge/Servlet-4.0-skyblue"> <img src="https://img.shields.io/badge/Tomcat-9.0.70-yellow"> <img src="https://img.shields.io/badge/Oracle-11.2.0.2.0-red">
 
 ---
 
@@ -39,3 +39,10 @@
 ◾ **무비 리뷰** `Version_0.2` 추가
 - 데이터베이스 업데이트
 - 로그인 오류 업데이트
+
+---
+
+#### [ver_0.5]
+◾ **무비 리뷰** `Version_0.5` 추가
+- 데이터베이스 추가 및 업데이트
+- 일부 기능 오류 수정

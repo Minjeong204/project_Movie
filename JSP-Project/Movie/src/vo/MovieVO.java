@@ -7,17 +7,28 @@ public class MovieVO {
 	private int runtime;
 	private String img;
 	private String info;
+	private int like_;
 
-	public MovieVO(int movieNo, String movieName, int category, int runtime, String img, String info) {
+	public MovieVO(int movieNo, String movieName, int category, int runtime, String img, String info, int like_) {
 		this.movieNo = movieNo;
 		this.movieName = movieName;
 		this.category = category;
 		this.runtime = runtime;
 		this.img = img;
 		this.info = info;
+		this.like_ = like_;
 	}
-	
-	public MovieVO() {}
+
+	public MovieVO() {
+	}
+
+	public int getLike_() {
+		return like_;
+	}
+
+	public void setLike_(int like_) {
+		this.like_ = like_;
+	}
 
 	public int getMovieNo() {
 		return movieNo;
