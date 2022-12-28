@@ -1,71 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
-<%@ include file="../header.jsp"%>
-
-<%
-	if (request.getAttribute("error") != null) {
-		out.print("<script>swal('오류', '"+ request.getAttribute("error") +"', 'error');</script>");
-	}
-
-	if(request.getAttribute("regID") != null) {
-		out.print("<script>swal('회원가입 환영', '"+ request.getAttribute("regID") +"님의 가입을 환영합니다.', 'success').then((val) => {location.href = '/';});</script>");
-	}
-%>
-
-<div class="ui container">
-	<div class="visual">
-		<img src="/images/logo.jpg" alt="visualImg">
-	</div>
-
-	<div class="main">
-		<h2>회원가입</h2>
-
-		<form class="ui form" action="/registerController.do" method="POST">
-			<div class="field">
-				<label>아이디</label>
-				<input type="text" name="userId" id="userId" placeholder="아이디를 입력해주세요">
-			</div>
-
-			<div class="two fields">
-				<div class="field">
-					<label>비밀번호</label>
-					<input type="password" name="userPW" id="userPW" placeholder="비밀번호를 입력해주세요">
-				</div>
-			
-				<div class="field">
-					<label>비밀번호 확인</label>
-					<input type="password" name="userRePW" id="userRePW" placeholder="비밀번호를 다시 입력해주세요">
-				</div>
-			</div>
-			
-			<div class="field">
-				<label>이메일</label>
-				<input type="email" name="userEmail" id="userEmail" placeholder="이메일 주소를 입력해주세요">
-			</div>
-
-			<div class="field">
-				<label>전화번호</label>
-				<input type="text" name="userPhone" id="userPhone"	placeholder="전화번호를 입력해주세요">
-			</div>
-
-			<div class="field">
-				<label>생년월일</label>
-				<input type="date" name="userBirth" id="userBirth">
-			</div>
-
-			<div class="field" style="display: flex; justify-content: flex-end; margin-top: 30px;">
-				<button type="reset" class="ui red button right">다시 입력</button>
-				<button type="button" class="ui primary button right" id="registerBtn">회원가입</button>
-				<input type="submit" id="registerSubmit" style="display: none;">
-			</div>
-		</form>
-	</div>
-<<<<<<< HEAD
-=======
 <link rel="stylesheet" href="/lib/style.css">
 <%@ include file="../header.jsp"%>
 
@@ -118,16 +52,13 @@ if (request.getAttribute("regID") != null) {
 
 		<div class="field" id="reg_btn"
 			style="display: flex; justify-content: flex-end; margin-top: 30px;">
-			<button type="reset" class="ui red button right">다시 입력</button>
-			<button type="button" class="ui primary button right"
+			<button type="reset" class="joinbtn1 ui red button right">다시 입력</button>
+			<button type="button" class="joinbtn2 ui primary button right"
 				id="registerBtn">회원가입</button>
 			<input type="submit" id="registerSubmit" style="display: none;">
 		</div>
 	</form>
 </div>
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 </div>
 
 <script>

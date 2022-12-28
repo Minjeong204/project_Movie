@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 @font-face {
 	font-family: nanum;
 	src: url("../font/NanumGothic.eot");
@@ -11,33 +8,17 @@
 		url("../font/NanumGothic.woff") format("woff");
 }
 
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
-}
-
-a,ul,li {list-style: none;}
-
-.visual img{
-	width: 100%;
-	height: 500px;
-<<<<<<< HEAD
-=======
 	transition: 300ms;
 	user-select: none;
 }
 
 body {
 	width: 100%;
-	font:  normal 12px/1.5em 'Arimo', Arial, sans-serif;
+	font: normal 12px/1.5em 'Arimo', Arial, sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	color: #010b26;
@@ -48,7 +29,6 @@ body {
 a, ul, li {
 	list-style: none;
 }
-
 
 .intro {
 	text-align: center;
@@ -184,11 +164,10 @@ a:hover {
 	}
 }
 
-
 #reg_box {
-	width:30%;
+	width: 30%;
 	margin-left: auto;
-	margin-right:auto;
+	margin-right: auto;
 }
 
 .join_title {
@@ -197,6 +176,19 @@ a:hover {
 	margin: 0 auto;
 	padding: 100px 0 30px 0;
 	font-size: 27px;
+}
+
+.joinbtn1 {
+	width: 180px !important;
+}
+
+.joinbtn1:hover {
+	background-color: black !important;
+}
+
+.joinbtn2 {
+	width: 300px !important;
+	height: 55px !important;
 }
 
 .log_vis {
@@ -227,21 +219,12 @@ a:hover {
 	width: 30%;
 	margin-left: auto;
 	margin-right: auto;
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 }
 
 .main {
 	margin: 40px 0;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.main h2 {
-	margin: 30px 0;
-	text-align: center;
-=======
 .user_id {
 	margin-bottom: -15px !important;
 }
@@ -264,23 +247,22 @@ a:hover {
 	color: #aaa;
 }
 
-.reviewlist_title,
-.movieinfo_title {
+.reviewlist_title, .movieinfo_title {
 	clear: both;
 	padding-top: 50px;
 	margin-right: 10px;
 	margin-bottom: 60px;
- 	font-size: 5em;
- 	font-family: cursive;
- 	text-align: center;
- 	text-shadow: 1px 1px 1px #777, 2px 2px 1px #555;
+	font-size: 5em;
+	font-family: cursive;
+	text-align: center;
+	text-shadow: 1px 1px 1px #777, 2px 2px 1px #555;
 }
 
 .reviewlist_title:hover {
 	-webkit-moz-filter: brightness(150%);
 	-webkit-ms-filter: brightness(150%);
 	-webkit-o-filter: brightness(150%);
-	filter : brightness(150%);
+	filter: brightness(150%);
 	text-shadow: 1px 1px 1px #777, 2px 2px 1px #555;
 }
 
@@ -307,7 +289,7 @@ a:hover {
 	border-right: 1px solid #333;
 }
 
-#screen > p {
+#screen>p {
 	width: 800px;
 	margin: 0 auto;
 	color: black;
@@ -315,10 +297,8 @@ a:hover {
 	text-align: center;
 	border: 2px solid red;
 	border-radius: 10px;
-	box-shadow: 1px 1px 2px 3px darkred, 
-	-1px -1px 5px darkred, 
-	1px 1px inset darkred, 
-	-1px -1px inset darkred;
+	box-shadow: 1px 1px 2px 3px darkred, -1px -1px 5px darkred, 1px 1px
+		inset darkred, -1px -1px inset darkred;
 }
 
 .seat_select {
@@ -328,12 +308,6 @@ a:hover {
 
 .ticketing {
 	margin-top: 50px !important;
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
-.main h2 {
-	margin: 30px 0;
-	text-align: center;
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 }
 
 .unit {
@@ -342,41 +316,27 @@ a:hover {
 	align-items: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 .review_main_img {
 	width: 700px;
 	height: 700px;
-	margin : 50px auto;
+	margin: 50px auto;
 }
 
-.review_main_img > img {
-	display : block;
+.review_main_img>img {
+	display: block;
 	width: 600px;
 	height: 700px;
-	margin : 0 auto;
+	margin: 0 auto;
 	border-radius: 5px;
 }
 
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 .movieInfoBox {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.movieInfoBox .leftBox, .movieInfoBox .rightBox {
-=======
 .movieInfoBox .movieInfoBox .rightBox {
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
-.movieInfoBox .leftBox, .movieInfoBox .rightBox {
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 	width: 50%;
 	padding: 10px;
 }
@@ -393,16 +353,6 @@ a:hover {
 }
 
 .movieInfoBox .rightBox table tbody tr:hover {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
-	background: #1c94ef;
-	cursor: pointer;
-}
-
-<<<<<<< HEAD
-=======
 	background: #4d4d4d;
 	cursor: pointer;
 }
@@ -413,12 +363,14 @@ a:hover {
 }
 
 .comment {
-	font: 700 18px/1.5 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font: 700 18px/1.5 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
 	letter-spacing: 1px;
 }
 
 .commnet_user_view {
-	font: 100 13px/1.5 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font: 100 13px/1.5 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
 	padding-bottom: 5px;
 }
 
@@ -461,27 +413,12 @@ a:hover {
 	height: 40px !important;
 }
 
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 .seatBox button {
 	width: 150px;
 	height: 60px;
 	margin: 10px !important;
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
-footer {
-	background: #1B1C1D;
-	margin-top: 40px;
-	padding: 40px;
-<<<<<<< HEAD
-}
-=======
 #top_wrap {
 	width: 100%;
 	height: 60px;
@@ -507,7 +444,6 @@ footer {
 	box-shadow: 1px 1px 3px #666666, -1px -1px 3px #666666;
 	opacity: .9;
 } /* js 추가 태그 */
-
 #top h1 {
 	width: 122px;
 	height: 42px;
@@ -565,7 +501,6 @@ footer {
 	color: #cc00ff;
 }
 
-
 #menu>li>.sub {
 	position: absolute;
 	left: 0;
@@ -581,18 +516,23 @@ footer {
 .sub li {
 	margin-top: 10px;
 }
+
 .genre1:hover {
 	color: maroon !important;
 }
+
 .genre2:hover {
 	color: #ff0080 !important;
 }
+
 .genre3:hover {
 	color: #800080 !important;
 }
+
 .genre4:hover {
 	color: #edcc12 !important;
 }
+
 .genre5:hover {
 	color: navy !important;
 }
@@ -618,7 +558,7 @@ footer {
 
 .quick {
 	float: right;
-} 
+}
 
 .quick>li {
 	float: left;
@@ -645,23 +585,20 @@ footer {
 
 #bottom ul {
 	height: 20px;
-} 
+}
 
 #bottom ul li {
 	display: inline;
 	background: url(../images/bar1.jpg) no-repeat left center;
 	padding-left: 15px;
 	margin-left: 5px;
-	
 }
 
 #bottom ul li:first-child {
 	background: none;
 	padding-left: 0;
 	margin-left: 0;
-	
 } /*중앙회 소개*/
-
 #bottom ul li a:hover {
 	text-decoration: underline;
 }
@@ -669,9 +606,7 @@ footer {
 #bottom address {
 	font-style: normal;
 	margin: 10px 0;
-} 
-
-
+}
 
 #userId, #userPW, #userRePW, #userEmail, #userPhone {
 	border: none;
@@ -686,7 +621,3 @@ footer {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,700');
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
-}
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70

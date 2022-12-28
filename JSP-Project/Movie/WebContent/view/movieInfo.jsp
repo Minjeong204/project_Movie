@@ -1,5 +1,4 @@
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="vo.ScheduleVO"%>
 <%@page import="vo.MovieVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -9,13 +8,12 @@
 
 <%
 	MovieVO movieInfo = new MovieVO();
-	ArrayList<ScheduleVO> schList = new ArrayList<ScheduleVO>();
+
 	
 	if(request.getAttribute("movieInfo") == null) {
 		response.sendRedirect("/");
 	}else {
 		movieInfo = (MovieVO) request.getAttribute("movieInfo");
-		schList = (ArrayList) request.getAttribute("scheduleAList");
 	}
 	
 	String cat = "";
@@ -24,19 +22,6 @@
 
 <div class="ui container">
     <div class="visual">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
-        <img src="/images/logo.jpg" alt="visualImg">
-    </div>
-
-    <div class="main">
-        <h2>영화 정보</h2>
-
-		<table class="ui inverted violet table movieInfoTable">
-<<<<<<< HEAD
-=======
       
     </div>
 
@@ -44,9 +29,6 @@
         <h2 class="movieinfo_title">영화 정보</h2>
 
 		<table class="category ui inverted gray table movieInfoTable">
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 			<thead>
 				<tr>
 					<th>영화 번호</th>
@@ -85,18 +67,8 @@
 			</tbody>
 		</table>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		<h2>관람 시간 선택</h2>
-		<p style="text-align: right;">Tip: 원하는 관람 시간대에 클릭하면 좌석 선택 페이지로 이동됩니다.</p>
-=======
 		<h2 class="viewingtime_title" style="border-left: 2px solid #333; padding-left: 2px;">관람 시간 선택</h2>
 		<p class="viewingtime_script">Tip: 원하는 관람 시간대에 클릭하면 좌석 선택 페이지로 이동됩니다.</p>
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
-		<h2>관람 시간 선택</h2>
-		<p style="text-align: right;">Tip: 원하는 관람 시간대에 클릭하면 좌석 선택 페이지로 이동됩니다.</p>
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 
 		<div class="movieInfoBox">
 			<div class="leftBox">
@@ -104,15 +76,7 @@
 			</div>
 
 			<div class="rightBox">
-<<<<<<< HEAD
-<<<<<<< HEAD
-				<table class="ui inverted blue table">
-=======
 				<table class="ui inverted table">
->>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
-=======
-				<table class="ui inverted blue table">
->>>>>>> 271c4ebc2215e7e9646ae9ff5b791bccf6166c70
 					<thead>
 						<tr>
 							<th>스케줄 번호</th>
@@ -122,23 +86,6 @@
 							<th>잔여석</th>
 						</tr>
 					</thead>
-					<tbody>
-						<%
-						for (ScheduleVO item : schList) {
-							SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 (HH시 mm분)");
-							String datetime = sdf.format(item.getRunDay());
-						%>
-						<tr onclick="location.href = '/chooseSeat.do?schNo=<%=item.getSchNo()%>&roomNo=<%=item.getRoomNo() %>';">
-							<td>No.<%=item.getSchNo() %></td>
-							<td><%=datetime %></td>
-							<td><%=item.getRuntime() %>분</td>
-							<td><%=item.getRoomNo() %>관</td>
-							<td><%=25 - item.getSeatCnt() %>석</td>
-						</tr>
-						<%
-							}
-						%>
-					</tbody>
 				</table>
 			</div>
 		</div>
