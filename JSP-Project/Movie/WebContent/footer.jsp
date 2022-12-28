@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< HEAD
 
 <footer>
   <div class="ui inverted vertical footer segment">
@@ -33,5 +34,28 @@
   </div>
 </footer>
 
+=======
+<link rel="stylesheet" href="/lib/style.css?after">
+<div id="bottom_wrap">
+    <footer id="bottom">
+      <ul>
+        <li><a href="#">3조소개</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">영상정보처리기기</a></li>
+        <li><a href="#">운영관리 방침</a></li>
+        <li><a href="#">부정비리신고</a></li>
+        <li><a href="#">찾아오시는길</a></li>
+        <li><a href="#">이메일주소 수집거부</a></li>
+        <li><a href="#">원격연결</a></li>
+      </ul>
+      <address class="add">
+        TEL:(02)2124-3114<br />
+        <span class="add_sub">07242 경기도 안산시 상록구</span>
+      </address>
+      <p>Copyright &copy; 2022 KBIZ All rights Reserved.</p>
+    </footer>
+  </div>
+>>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
 </body>
 </html>

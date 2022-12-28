@@ -27,12 +27,18 @@
 %>
 
 <div class="ui container">
+<<<<<<< HEAD
     <div class="visual">
         <img src="/images/logo.jpg" alt="visualImg">
     </div>
 
     <div class="main" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
         <h2>좌석 선택하기</h2>
+=======
+	<div id="screen"><p>S C R R E N </p></div>
+    <div class="main" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h2 class=seat_select>좌석 선택하기</h2>
+>>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
         
         <div class="seatBox">
         <%-- <%
@@ -82,7 +88,11 @@
         </div>
         
         <div style="text-align: right;">
+<<<<<<< HEAD
         	<button class="ui purple basic button submitBtn">예매하기</button>
+=======
+        	<button class="ticketing ui purple basic button submitBtn">예매하기</button>
+>>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
         </div>
 	</div>
 </div>

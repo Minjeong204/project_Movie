@@ -24,6 +24,7 @@
 
 <div class="ui container">
     <div class="visual">
+<<<<<<< HEAD
         <img src="/images/logo.jpg" alt="visualImg">
     </div>
 
@@ -31,6 +32,15 @@
         <h2>영화 정보</h2>
 
 		<table class="ui inverted violet table movieInfoTable">
+=======
+      
+    </div>
+
+    <div class="main">
+        <h2 class="movieinfo_title">영화 정보</h2>
+
+		<table class="category ui inverted gray table movieInfoTable">
+>>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
 			<thead>
 				<tr>
 					<th>영화 번호</th>
@@ -69,8 +79,13 @@
 			</tbody>
 		</table>
 
+<<<<<<< HEAD
 		<h2>관람 시간 선택</h2>
 		<p style="text-align: right;">Tip: 원하는 관람 시간대에 클릭하면 좌석 선택 페이지로 이동됩니다.</p>
+=======
+		<h2 class="viewingtime_title" style="border-left: 2px solid #333; padding-left: 2px;">관람 시간 선택</h2>
+		<p class="viewingtime_script">Tip: 원하는 관람 시간대에 클릭하면 좌석 선택 페이지로 이동됩니다.</p>
+>>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
 
 		<div class="movieInfoBox">
 			<div class="leftBox">
@@ -78,7 +93,11 @@
 			</div>
 
 			<div class="rightBox">
+<<<<<<< HEAD
 				<table class="ui inverted blue table">
+=======
+				<table class="ui inverted table">
+>>>>>>> 8b7e7cd625f18be0867f2d4115585945e3f9d31a
 					<thead>
 						<tr>
 							<th>스케줄 번호</th>

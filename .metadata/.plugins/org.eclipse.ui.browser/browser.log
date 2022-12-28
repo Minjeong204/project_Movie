@@ -1,0 +1,9 @@
+
+12월 28, 2022 24:27:49.709 NEW SESSION
+12월 28, 2022 24:27:49.709 [8716:8712:1228/002749.707:ERROR:device_event_log_impl.cc(215)] [00:27:49.704] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 28, 2022 24:27:49.714 [8716:8712:1228/002749.713:ERROR:device_event_log_impl.cc(215)] [00:27:49.710] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 28, 2022 24:27:49.714 [8716:8712:1228/002749.713:ERROR:device_event_log_impl.cc(215)] [00:27:49.710] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 28, 2022 24:27:49.714 [8716:8712:1228/002749.713:ERROR:device_event_log_impl.cc(215)] [00:27:49.710] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 28, 2022 24:28:47.375 [8716:7364:1228/002847.375:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 28, 2022 24:43:36.183 [8716:8712:1228/004336.183:ERROR:interface_endpoint_client.cc(694)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 28, 2022 02:23:01.825 [8716:8712:1228/022301.825:ERROR:CONSOLE(598)] "Uncaught Error: PageHandler_UndoBlocklistPromo_Params missing value for non-nullable field "promoId"", source: chrome://resources/mojo/mojo/public/js/bindings.js (598)
