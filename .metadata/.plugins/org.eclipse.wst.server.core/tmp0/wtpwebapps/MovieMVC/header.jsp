@@ -28,7 +28,6 @@ if (user != null) {
 %>
 
 
-
 <body>
 
 	<div class="ui container">
@@ -78,9 +77,7 @@ if (user != null) {
 
 			<div class="right item">
 				<p class="user_id"><%=user.getId()%>님</p>
-				<div class="mypage ui primary button"
-					onclick="location.href = '/view/myTickets.jsp';">마이페이지</div>
-			</div>
+		
 
 			<div class="item">
 				<div class="logout ui button"

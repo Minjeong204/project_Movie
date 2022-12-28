@@ -1,0 +1,316 @@
+<%@page import="vo.MovieVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page session="true" %>
+<link rel="stylesheet" href="/lib/list.css?after">
+ <script src="../lib/jquery-3.6.1.min.js"></script> 
+<script src="../lib/jquery-1.8.3.min.js"></script>
+<script src="../lib/jquery-ui-1.10.4.custom.min.js"></script>
+<%@ include file="../header.jsp" %>
+
+<%
+	ArrayList<MovieVO> list = new ArrayList<MovieVO>();
+
+	if(request.getAttribute("movieList") == null) {
+		response.sendRedirect("movieList.do");
+	}else {
+		list = (ArrayList) request.getAttribute("movieList");
+	}
+%>
+
+<div class="ui container">
+        <!-- <img src="./images/logo.jpg" alt="visualImg"> -->
+       <div class="visual">
+        <!-- <img src="./images/logo.jpg" alt="visualImg"> -->
+         <div id="appletv_post">
+      <div class="appletv_post_con">
+     
+      <div id="atv_p">
+        <div id="atv_wrap">
+          <ul class="atv">
+            <li class="no_1" data-n="1"><a href="#"><img src="https://img.newspim.com/news/2020/04/13/2004130813526320.jpg" alt="럭 포스터" width="688" height="387"></a></li>
+            <li class="no_2" data-n="2"><a href="#"><img src="https://image.kmib.co.kr/online_image/2022/0107/2022010620211463553_1641468075_0924226465.jpg" alt="테드 래소 포스터" width="688" height="387"></a></li>
+            <li class="no_3" data-n="3"><a href="#"><img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202211/04/tvdaily/20221104093722155qeis.jpg" alt="DR.브레인 포스터" width="688" height="387"></a></li>
+            <!-- <li class="no_4" data-n="4"><a href="#"><img src="http://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/09/29/21c8e0c9-b498-4595-9ca4-5579a95221c2.jpg" alt="인베이션 포스터" width="688" height="387"></a></li>
+            <li class="no_5" data-n="5"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUJQfG8lpVdxBnvZKeHbNiWSFFQgYqQNTkQ&usqp=CAU" alt="세브란스:단절 포스터" width="688" height="387"></a></li>
+            <li class="no_6" data-n="6"><a href="#"><img src="https://img.asiatoday.co.kr/file/2022y/08m/15d/2022081501001398400084201.jpg" alt="SEE 어둠의 나날 포스터" width="688" height="387"></a></li> -->
+          </ul><!--atv-->
+        </div><!--atv_wrap-->
+      </div><!--atv_p-->
+      <p class="prev"><img src="../images/prev.png" alt="이전버튼" width="33" height="62"></p>
+      <p class="next"><img src="../images/next.png" alt="다음버튼" width="33" height="62"></p>
+      </div><!--appletv_post_con-->
+    </div><!--#appletv_post/애플 광고 전체-->
+     
+    </div>
+
+    <div class="main">
+        <h2>전체 영화 목록a</h2>
+
+        <div class="MovieList">
+            <div class="ui link cards unit">
+            <%
+				for (MovieVO vo : list) {
+					String cat = "";
+					
+					switch (vo.getCategory()) {
+						case 1 :
+							cat = "액션";
+							break;
+						case 2 :
+							cat = "로맨스";
+							break;
+						case 3 :
+							cat = "코미디";
+							break;
+						case 4 :
+							cat = "스릴러";
+							break;
+						case 5 :
+							cat = "애니메이션";
+							break;
+					}
+			%>
+                <%-- <div class="card" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>';">
+                    <div class="image">
+                        <img src="/images/<%=vo.getImg()%>">
+                    </div>
+
+                    <div class="content"> 
+                        <div class="header"><%=vo.getMovieName() %></div>
+
+                        <div class="meta">
+                            <span class="date"><%=cat %></span>
+                        </div>
+
+                        <div class="description">
+                        	<%=vo.getInfo() %>
+                        </div>
+                    </div>
+
+                    <div class="extra content">
+                        <span class="right floated">
+                       	<%=vo.getRuntime() %>분
+                        </span>
+
+                        <span>
+                            <i class="user icon"></i>
+                            No: <%=vo.getMovieNo() %>
+                        </span>
+                    </div>
+                </div> --%>
+                <div class="movie-card">
+		<div class="movie-header avengers">
+			<div class="header-icon-container">
+				<a href="#">
+				
+				</a>
+				
+			</div>
+			
+		</div><!--movie-header-->
+		
+		<div class="movie-content" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>'";>
+		
+			<div class="movie-content-header">
+			<img alt="" src="<%=vo.getImg()%>">
+				<a href="#">
+					<h3 class="movie-title"><%=vo.getMovieName() %></h3>
+				</a>
+				<div class="imax-logo"></div>
+			</div>
+			<div class="movie-info">
+				<div class="info-section">
+					<label>장르</label>
+					<span><%=cat %>	</span>
+				</div><!--date,time-->
+				<div class="info-section">
+					<label>상영시간</label>
+					<span><%=vo.getRuntime() %></span>
+				</div><!--screen-->
+				<div class="info-section">
+					<label>영화번호</label>
+					<span><%=vo.getMovieNo() %></span>
+				</div><!--row-->
+			</div>
+		</div><!--movie-content-->
+	</div><!--movie-card-->
+            <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+	function banner() {
+
+		$(".atv:not(:animated)").animate({
+			marginLeft : parseInt($(".atv").css("margin-left")) - 688 + "px"
+		}, "slow", "swing", function() {
+			$(".atv li:first").appendTo(".atv");
+			$(".atv").css("margin-left", "-688px");
+			var n = $(".atv li").attr("data-n");
+			n++;
+			if (n == 7) {
+				n = 1;
+			}
+			$("#appletv_post").removeClass();
+			$("#appletv_post").addClass("bg" + n).animate({
+				"transition" : ".9s"
+			});
+		});
+	}
+
+	$(document)
+			.ready(
+					function() {
+						
+						// 포스터 자동슬라이드
+						// var li_w = $(".atv li").width();
+						var w = 690 * $(".atv li").length + "px";
+						$(".atv").css("width", w);
+						$(".atv li:last").prependTo(".atv");
+						$(".atv").css("margin-left", "-690px");
+
+						$("#appletv_post").addClass("bg1");
+
+						$(".prev").click(
+								function() {// <
+									$(".atv:not(:animated)").animate(
+											{
+												marginLeft : parseInt($(".atv")
+														.css("margin-left"))
+														- 690 + "px"
+											},
+											function() {
+												$(".atv li:first").appendTo(
+														".atv");
+												$(".atv").css("margin-left",
+														"-690px")
+
+												var n = $(".atv li").attr(
+														"data-n");
+												n++;
+												if (n == 7) {
+													n = 1;
+												}
+												$("#appletv_post")
+														.removeClass();
+												$("#appletv_post").addClass(
+														"bg" + n).animate({
+													"transition" : ".9s"
+												});
+											});
+								});
+						$(".next").click(
+								function() {// >
+									$(".atv:not(:animated)").animate(
+											{
+												marginLeft : parseInt($(".atv")
+														.css("margin-left"))
+														+ 690 + "px"
+											},
+											function() {
+												$(".atv li:last").prependTo(
+														".atv");
+												$(".atv").css("margin-left",
+														"-690px");
+
+												var n = $(".atv li").attr(
+														"data-n");
+												n++;
+												if (n == 7) {
+													n = 1;
+												}
+												$("#appletv_post")
+														.removeClass();
+												$("#appletv_post").addClass(
+														"bg" + n).animate({
+													"transition" : ".9s"
+												});
+											});
+								});
+						var banner = setInterval("banner()", 3000);
+
+						$(".atv li").mouseover(function() {
+							clearInterval(banner);
+							$(this).find("img").css("opacity", "0.5");
+						}).mouseout(function() {
+							banner = setInterval("banner()", 3000);
+							$(this).find("img").css("opacity", "1.0");
+						});
+						$(".next").mouseover(function() {
+							clearInterval(banner);
+							$(this).find("img").css("opacity", "0.5");
+						}).mouseout(function() {
+							banner = setInterval("banner()", 3000);
+							$(this).find("img").css("opacity", "1.0");
+						});
+						$(".prev").mouseover(function() {
+							clearInterval(banner);
+							$(this).find("img").css("opacity", "0.5");
+						}).mouseout(function() {
+							banner = setInterval("banner()", 3000);
+							$(this).find("img").css("opacity", "1.0");
+						});
+
+						$(".s_se").mouseover(
+								function() {
+									$(this).attr("src",
+											"images/iphone_se_cut_large.jpg")
+											.css("width", "151").css("height",
+													"257");
+								}).mouseout(
+								function() {
+									$(this).attr("src",
+											"images/iphone_se_cut_medium.jpg")
+											.css("width", "119").css("height",
+													"204");
+								});
+						$(".s_13").mouseover(
+								function() {
+									$(this).attr("src",
+											"images/iphone_13_cut_large.jpg")
+											.css("width", "161").css("height",
+													"257");
+								}).mouseout(
+								function() {
+									$(this).attr("src",
+											"images/iphone_13_cut_medium.jpg")
+											.css("width", "128").css("height",
+													"204");
+								});
+						$(".s_14").mouseover(
+								function() {
+									$(this).attr("src",
+											"images/iphone_14_cut_large.jpg")
+											.css("width", "180").css("height",
+													"257");
+								}).mouseout(
+								function() {
+									$(this).attr("src",
+											"images/iphone_14_cut_medium.jpg")
+											.css("width", "143").css("height",
+													"204");
+								});
+						$(".s_14pro")
+								.mouseover(
+										function() {
+											$(this)
+													.attr("src",
+															"images/iphone_14_pro_cut_large.jpg")
+													.css("width", "190").css(
+															"height", "257");
+										})
+								.mouseout(
+										function() {
+											$(this)
+													.attr("src",
+															"images/iphone_14_pro_cut_medium.jpg")
+													.css("width", "151").css(
+															"height", "204");
+										});
+
+					});
+</script>
+<%@ include file="../footer.jsp" %>

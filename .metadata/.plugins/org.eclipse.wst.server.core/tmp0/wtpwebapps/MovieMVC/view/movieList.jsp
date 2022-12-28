@@ -111,7 +111,7 @@
 			
 		</div><!--movie-header-->
 		
-		<div class="movie-content" onclick="location.href = '/movieInfo.do?movieNo=<%=vo.getMovieNo()%>'";>
+		<div class="movie-content" onclick="location.href = '/reviewList.do?movieNo=<%=vo.getMovieNo()%>';";>
 		
 			<div class="movie-content-header">
 			<img alt="" src="<%=vo.getImg()%>">

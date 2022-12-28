@@ -42,61 +42,53 @@ String img = "";
     </div> -->
 
 	<div class="main">
-		<h2 class="reviewlist_title">영화 정보</h2>
-
-		<table class="category ui inverted violet table movieInfoTable">
-			<thead class="category">
-				<tr>
-					<th>영화 번호</th>
-					<th>카테고리</th>
-					<th>제목</th>
-					<th>영화 정보</th>
-				</tr>
-			</thead>
-			<tbody>
-				<%
-				img = movieInfo.getImg();
-
-				switch (movieInfo.getCategory()) {
-				case 1:
-					cat = "액션";
-					break;
-				case 2:
-					cat = "로맨스";
-					break;
-				case 3:
-					cat = "코미디";
-					break;
-				case 4:
-					cat = "스릴러";
-					break;
-				case 5:
-					cat = "애니메이션";
-					break;
-				}
-				%>
-				<tr>
-					<td>No.<%=movieInfo.getMovieNo()%></td>
-					<td><%=cat%></td>
-					<td><%=movieInfo.getMovieName()%></td>
-					<td><%=movieInfo.getInfo()%></td>
-				</tr>
-			</tbody>
-		</table>
+		<h2 class="reviewlist_title">Moive Review</h2>
 		
-		<div class="movieInfoBox">
-			<div class="leftBox">
+			<%
+			img = movieInfo.getImg();
+			switch (movieInfo.getCategory()) {
+			case 1:
+				cat = "액션";
+				break;
+			case 2:
+				cat = "로맨스";
+				break;
+			case 3:
+				cat = "코미디";
+				break;
+			case 4:
+				cat = "스릴러";
+				break;
+			case 5:
+				cat = "애니메이션";
+				break;
+			}
+			%>
+		
+			<div class="review_main_img">
 				<img src="/images/<%=img%>" alt="<%=img%>">
 			</div>
+			<table class="category ui inverted none table movieInfoTable">
+				<tr>
+					<th>제 목</th>
+					<th>카테고리</th>
+				</tr>
+				<tr>
+					<td><%=movieInfo.getMovieName()%></td>
+					<td><%=cat%></td>
+				</tr>
+			</table>
+		
+		<div class="movieInfoBox">
 
 			<div class="rightBox">
-				<p>${num}개의댓글</p>
-				<hr style="border: solid 1px black;">
+				<p class="comment">${num}개의 댓글</p>
+				<p class="review_line"></p>
 				<c:set var="userId" value="${user.getId()}" />
 
-				<c:if test="${userId == null }">
+				<c:if test="${ userId == null }">
 					<form name="review" action="#">
-						<div style="font-size: 15px; padding: 5px;">--- 님</div>
+						<div class="commnet_user_view">--- 님</div>
 						<textarea style="resize: none; width: 100%;" name="txt" id="txt"
 							placeholder="로그인 후 이용해주세요" disabled></textarea>
 
@@ -118,16 +110,15 @@ String img = "";
 					<form name="review"
 						action="/reviewInsert.do?userId=${user.getId()}&movieNo=${mn}"
 						method="post">
-						<div style="font-size: 15px; padding: 5px;">
-							${user.getId()}님</div>
-						<textarea style="resize: none; width: 100%;" name="txt" id="txt"
+						<div class="commnet_user_view">${user.getId()}님</div>
+						<textarea class="cmo" style="resize: none;  width: 100%;" name="txt" id="txt"
 							placeholder="댓글을 입력하세요" onkeyup="counter()"></textarea>
 						<div class="item">
 							<div style="float: left;">
 								<span style="color: #aaa;" id="counting">0</span>/50자
 							</div>
 							<div style="float: right; display: inline-block; hegiht: 50px">
-								<button type="submit" class="" id="registerBtn">등록</button>
+								<button type="submit" class="" id="registerBtn">작성</button>
 							</div>
 						</div>
 						<br>
@@ -135,8 +126,8 @@ String img = "";
 				</c:if>
 
 				
-				<h2>영화 후기</h2>
-				<table class="ui inverted red table">
+				<h2 class="movie_after_title">영화 후기</h2>
+				<table class="movie_after ui inverted none table">
 					<tr>
 						<th>No.</th>
 						<th>작성자</th>
@@ -156,7 +147,7 @@ String img = "";
 							<c:choose>
 								<c:when test="${ reviewList.id == user.getId()}">
 									<td><button
-											style="color: blue; background: white; font-size: 0.5em; border-radius: 1em; padding: 5px 20px;"
+											style="color: black; background: white; font-size: 0.5em; border-radius: 1.1em; padding: 5px 20px;"
 											onclick="location.href = '/deleteReview.do?num=${reviewList.num}&movieNo=${reviewList.movieNo}';">삭제</button>
 									</td>
 								</c:when>

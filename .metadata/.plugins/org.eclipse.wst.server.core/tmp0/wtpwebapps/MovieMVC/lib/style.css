@@ -13,6 +13,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	transition: 300ms;
+	user-select: none;
 }
 
 body {
@@ -223,8 +224,8 @@ a:hover {
 
 .logout {
 	float: right;
-	margin-top: -36px !important;
-	margin-right: 15px !important;
+	margin-top: -15px !important;
+	margin-right: 120px !important;
 }
 
 .review_tilte {
@@ -239,8 +240,20 @@ a:hover {
 .movieinfo_title {
 	clear: both;
 	padding-top: 50px;
-	padding-left: 40px;
-	margin-bottom: 50px;
+	margin-right: 10px;
+	margin-bottom: 60px;
+ 	font-size: 5em;
+ 	font-family: cursive;
+ 	text-align: center;
+ 	text-shadow: 1px 1px 1px #777, 2px 2px 1px #555;
+}
+
+.reviewlist_title:hover {
+	-webkit-moz-filter: brightness(150%);
+	-webkit-ms-filter: brightness(150%);
+	-webkit-o-filter: brightness(150%);
+	filter : brightness(150%);
+	text-shadow: 1px 1px 1px #777, 2px 2px 1px #555;
 }
 
 .viewingtime_title {
@@ -254,8 +267,16 @@ a:hover {
 }
 
 .category {
-	width: 500px !important;
-	margin-left: 30px !important;
+	width: 550px !important;
+	height: 90px !important;
+	margin: 0 auto !important;
+	margin-bottom: 50px !important;
+	font-size: 1.5em !important;
+	letter-spacing: 2px;
+}
+
+.category td:nth-child(1) {
+	border-right: 1px solid #333;
 }
 
 #screen > p {
@@ -287,13 +308,27 @@ a:hover {
 	align-items: center;
 }
 
+.review_main_img {
+	width: 700px;
+	height: 700px;
+	margin : 50px auto;
+}
+
+.review_main_img > img {
+	display : block;
+	width: 600px;
+	height: 700px;
+	margin : 0 auto;
+	border-radius: 5px;
+}
+
 .movieInfoBox {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
-.movieInfoBox .leftBox, .movieInfoBox .rightBox {
+.movieInfoBox .movieInfoBox .rightBox {
 	width: 50%;
 	padding: 10px;
 }
@@ -310,8 +345,62 @@ a:hover {
 }
 
 .movieInfoBox .rightBox table tbody tr:hover {
-	background: #1c94ef;
+	background: #4d4d4d;
 	cursor: pointer;
+}
+
+.movie_after_title {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.comment {
+	font: 700 18px/1.5 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	letter-spacing: 1px;
+}
+
+.commnet_user_view {
+	font: 100 13px/1.5 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding-bottom: 5px;
+}
+
+.cmo {
+	width: 520px;
+	border-radius: 3px !important;
+	outline: none !important;
+}
+
+.cmo:focus {
+	border: 2px solid #777;
+}
+
+.review_line {
+	width: 563px;
+	height: 1px;
+	border-bottom: 2px solid #777;
+	margin: 20px 0 15px 0;
+}
+
+#registerBtn {
+	margin-top: 5px;
+	width: 50px;
+	height: 30px;
+	border: 2px solid #eaeaea;
+	border-radius: 5px;
+	outline: none;
+	letter-spacing: 2px;
+}
+
+#registerBtn:hover {
+	color: #fff;
+	font-weight: bold;
+	background-color: black;
+	letter-spacing: 2px;
+}
+
+.movie_after {
+	width: 563px !important;
+	height: 40px !important;
 }
 
 .seatBox button {
