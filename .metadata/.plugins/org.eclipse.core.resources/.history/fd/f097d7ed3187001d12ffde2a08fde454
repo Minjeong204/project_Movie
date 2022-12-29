@@ -59,6 +59,7 @@ if (request.getAttribute("regID") != null) {
 		</div>
 	</form>
 </div>
+</div>
 
 <script>
 	registerBtn.addEventListener("click", () => {

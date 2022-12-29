@@ -47,7 +47,7 @@ if (request.getParameter("pageNo") != null)
 	var regExp = /^[0-5]*$/;
 	
 	 if(!regExp.test(num)) {
-		    alert("1 ~ 5점까지 입력해 주세요 :D ");
+		    alert("숫자만 입력 가능합니다. 다시 입력해주세요.");
 		    return false;
 		  }
 	 return true;
@@ -86,16 +86,12 @@ if (request.getParameter("pageNo") != null)
 				<tr>
 					<th>제 목</th>
 					<th>카테고리</th>
-					<th>평균 별점</th>
-					
 				</tr>
 				<tr>
 					<td><%=movieInfo.getMovieName()%></td>
 					<td><%=cat%></td>
-					<td>${score_avg}</td>
 				</tr>
 			</table>
-	
 		
 		<div class="movieInfoBox">
 
@@ -115,7 +111,7 @@ if (request.getParameter("pageNo") != null)
 								<span style="color: #aaa;" id="counting">0</span>/50자
 							</div>
 							<div style="float: right; display: inline-block; hegiht: 50px; margin: 8px;">
-							<input type="text" name="score" value="별점 입력 [1 ~ 5점]" />
+							<input type="text" name="score" value="별점을 입력해주세요. 5점 만점" />
 							</div>
 							<div style="float: right; display: inline-block; hegiht: 50px;">
 								<button type="button" class="" id="registerBtn"
@@ -141,7 +137,7 @@ if (request.getParameter("pageNo") != null)
 							<div
 								style="float: right; display: inline-block; hegiht: 50px; margin: 8px;">
 								★ <input type="text" name="score" id="score"
-									placeholder="별점 입력 [1 ~ 5점]" />
+									placeholder="별점을 입력해주세요. 5점 만점" />
 							</div>
 							<div style="float: right; display: inline-block; hegiht: 50px">
 								<button type="submit" class="" id="registerBtn"
@@ -165,17 +161,16 @@ if (request.getParameter("pageNo") != null)
 
 					<c:forEach var="reviewList" items="${list }">
 						<tr>
-							<td>${reviewList.getNum()}</td>
-							<td>${reviewList.getId()}</td>
+							<td>${reviewList.num}</td>
+							<td>${reviewList.id}</td>
 							<td
-								style="text-align: left; table-layout: fixed; max-width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-								${reviewList.getContent()}</td>
-							<td>${reviewList.getWritedate() }</td>
-							<td>${reviewList.getScore()}</td>
+								style="text-align: center; table-layout: fixed; max-width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
+								${reviewList.content}</td>
+							<td>${reviewList.writedate }</td>
 							<c:choose>
 								<c:when test="${ reviewList.id == user.getId()}">
 									<td><button
-											style="color: blue; background: white; font-size: 0.5em; border-radius: 1em; padding: 5px 20px;"
+											style="color: black; background: white; font-size: 0.5em; border-radius: 1.1em; padding: 5px 20px;"
 											onclick="location.href = '/deleteReview.do?num=${reviewList.num}&movieNo=${reviewList.movieNo}';">삭제</button>
 									</td>
 								</c:when>

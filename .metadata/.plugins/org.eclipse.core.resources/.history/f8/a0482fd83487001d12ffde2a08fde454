@@ -47,7 +47,7 @@ if (request.getParameter("pageNo") != null)
 	var regExp = /^[0-5]*$/;
 	
 	 if(!regExp.test(num)) {
-		    alert("1 ~ 5점까지 입력해 주세요 :D ");
+		    alert("1 ~ 5 사이의 정수만 입력 가능합니다.");
 		    return false;
 		  }
 	 return true;
@@ -141,7 +141,7 @@ if (request.getParameter("pageNo") != null)
 							<div
 								style="float: right; display: inline-block; hegiht: 50px; margin: 8px;">
 								★ <input type="text" name="score" id="score"
-									placeholder="별점 입력 [1 ~ 5점]" />
+									placeholder=""별점 입력 [1 ~ 5점]"" />
 							</div>
 							<div style="float: right; display: inline-block; hegiht: 50px">
 								<button type="submit" class="" id="registerBtn"

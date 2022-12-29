@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="장르별"/>
+		<item key="selection" value="별점"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="별점"/>
+			<item value="별점&apos;"/>
 			<item value="장르별"/>
 			<item value="회원 가입"/>
 			<item value="footer"/>
@@ -21,8 +23,6 @@
 			<item value="댓글을"/>
 			<item value="reviewlist_title"/>
 			<item value="movie review"/>
-			<item value="review_tilte"/>
-			<item value="movie"/>
 		</list>
 		<list key="replacehistory">
 		</list>
