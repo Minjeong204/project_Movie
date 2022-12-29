@@ -1,4 +1,4 @@
-# **[test]** Project_MovieReview  📔
+# **Project_MovieReview**  📔
 
  ## 💡 `JSP` & `Servlet` PROJECT <img src="https://img.shields.io/badge/Java-11-pink"> <img src="https://img.shields.io/badge/JSP-2.3-hotpink"> <img src="https://img.shields.io/badge/Servlet-4.0-skyblue"> <img src="https://img.shields.io/badge/Tomcat-9.0.70-yellow"> <img src="https://img.shields.io/badge/Oracle-11.2.0.2.0-red">
 
@@ -168,3 +168,17 @@
 ◾ test 완료
 <br>
 ◾ 배포 준비
+
+---
+
+#### [release-1.0]
+
+◾ **`release-1.0`** 배포
+
+<br>
+<br>
+
+```
+메모란
+
+```
