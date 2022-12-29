@@ -179,17 +179,21 @@ a:hover {
 }
 
 .joinbtn1 {
-	width: 180px !important;
-}
-
-.joinbtn1:hover {
 	background-color: black !important;
-}
-
-.joinbtn2 {
+	color: white !important;
 	width: 300px !important;
 	height: 55px !important;
 }
+
+
+.joinbtn2 {
+	background-color: #fff !important;
+	color: black !important;
+	width: 300px !important;
+	height: 55px !important;
+	box-shadow: 1px 1px 1px #555, 2px 2px 3px #777 !important;
+}
+
 
 .log_vis {
 	width: 30%;
@@ -285,7 +289,8 @@ a:hover {
 	letter-spacing: 2px;
 }
 
-.category td:nth-child(1) {
+.category td:nth-child(1),
+.category td:nth-child(2) {
 	border-right: 1px solid #333;
 }
 
@@ -391,22 +396,6 @@ a:hover {
 	margin: 20px 0 15px 0;
 }
 
-#registerBtn {
-	margin-top: 5px;
-	width: 50px;
-	height: 30px;
-	border: 2px solid #eaeaea;
-	border-radius: 5px;
-	outline: none;
-	letter-spacing: 2px;
-}
-
-#registerBtn:hover {
-	color: #fff;
-	font-weight: bold;
-	background-color: black;
-	letter-spacing: 2px;
-}
 
 .movie_after {
 	width: 563px !important;

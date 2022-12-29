@@ -33,13 +33,13 @@
             <!-- <li class="no_4" data-n="4"><a href="#"><img src="http://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/09/29/21c8e0c9-b498-4595-9ca4-5579a95221c2.jpg" alt="인베이션 포스터" width="688" height="387"></a></li>
             <li class="no_5" data-n="5"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUJQfG8lpVdxBnvZKeHbNiWSFFQgYqQNTkQ&usqp=CAU" alt="세브란스:단절 포스터" width="688" height="387"></a></li>
             <li class="no_6" data-n="6"><a href="#"><img src="https://img.asiatoday.co.kr/file/2022y/08m/15d/2022081501001398400084201.jpg" alt="SEE 어둠의 나날 포스터" width="688" height="387"></a></li> -->
-          </ul><!--atv-->
-        </div><!--atv_wrap-->
-      </div><!--atv_p-->
+          </ul>
+        </div>
+      </div>
       <p class="prev"><img src="../images/prev.png" alt="이전버튼" width="33" height="62"></p>
       <p class="next"><img src="../images/next.png" alt="다음버튼" width="33" height="62"></p>
-      </div><!--appletv_post_con-->
-    </div><!--#appletv_post/애플 광고 전체-->
+      </div>
+    </div>
      
     </div>
 
@@ -71,7 +71,7 @@
 					}
 			%>
      
-                <div class="movie-card">
+      <div class="movie-card">
 		<div class="movie-header avengers">
 			<div class="header-icon-container">
 				<a href="#">
@@ -82,10 +82,10 @@
 			
 		</div><!--movie-header-->
 		
-		<div class="movie-content" onclick="location.href = '/reviewList.do?movieNo=<%=vo.getMovieNo()%>';";>
+		<div class="movie-content" onclick="location.href = '/reviewList.do?movieNo=<%=vo.getMovieNo()%>'">
 		
 			<div class="movie-content-header">
-			<img alt="" src="<%=vo.getImg()%>">
+			<img id="main_movie_images" alt="main_images" src="<%=vo.getImg()%>" width="280" height="390">
 				<a href="#">
 					<h3 class="movie-title"><%=vo.getMovieName() %></h3>
 				</a>

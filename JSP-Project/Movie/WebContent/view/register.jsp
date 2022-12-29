@@ -52,9 +52,9 @@ if (request.getAttribute("regID") != null) {
 
 		<div class="field" id="reg_btn"
 			style="display: flex; justify-content: flex-end; margin-top: 30px;">
-			<button type="reset" class="joinbtn1 ui red button right">다시 입력</button>
-			<button type="button" class="joinbtn2 ui primary button right"
+			<button type="button" class="joinbtn1 ui primary button right"
 				id="registerBtn">회원가입</button>
+			<button type="reset" class="joinbtn2 ui red button right">Reset</button>
 			<input type="submit" id="registerSubmit" style="display: none;">
 		</div>
 	</form>

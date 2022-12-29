@@ -80,9 +80,9 @@ if (request.getParameter("pageNo") != null)
 			%>
 		
 			<div class="review_main_img">
-				<img src="/images/<%=img%>" alt="<%=img%>">
+				<img src="<%=img%>" alt="<%=img%>">
 			</div>
-			<table class="category ui inverted none table movieInfoTable">
+			<table class="category ui inverted white table movieInfoTable">
 				<tr>
 					<th>제 목</th>
 					<th>카테고리</th>
@@ -153,7 +153,7 @@ if (request.getParameter("pageNo") != null)
 				</c:if>
 
 				<h2 class="movie_after_title">영화 후기</h2>
-				<table class="movie_after ui inverted none table">
+				<table class="movie_after ui inverted white table">
 					<tr>
 						<th>No.</th>
 						<th>작성자</th>

@@ -41,7 +41,7 @@
 							<ul class="sub">
 								<li><a class="genre1" href="/movieList.do?cat_no=1">액션</a></li>
 								<li><a class="genre2" href="/movieList.do?cat_no=2">로맨스</a></li>
-								<li><a class="genre3" href="/movieList.do?cat_no=3">공포</a></li>
+								<li><a class="genre3" href="/movieList.do?cat_no=3">코미디</a></li>
 								<li><a class="genre4" href="/movieList.do?cat_no=4">스릴러</a></li>
 								<li><a class="genre5" href="/movieList.do?cat_no=5">애니메이션</a></li>
 							</ul></li>       

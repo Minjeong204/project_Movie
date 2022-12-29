@@ -1,177 +1,202 @@
-drop table schedule;
-drop table movie;
-drop table dayRoom;
-drop table Room;
-drop table ticket;
 drop table member;
+drop table movie cascade CONSTRAINTS;
 drop table reviews;
 
-CREATE TABLE movie(
-	movieNo number primary key, --ì˜í™” ë²ˆí˜¸
-	movieName VARCHAR2(20), --ì˜í™” ì œëª©
-	category number, --ì¥ë¥´
-	runtime number, --120ë¶„
-	img VARCHAR2(50), --ì´ë¯¸ì§€ íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸° ìœ„í•œ ì œëª©
-	info VARCHAR2(200) --ì˜í™” ì •ë³´
-);
-
-INSERT INTO movie VALUES(10000, 'ì–´ë²¤ì €ìŠ¤', 01, 120, '1.jpg', 'ì¬ë°Œë‹¤');
-INSERT INTO movie VALUES(10001, 'ë…¸íŒ…í', 02, 120, '2.jpg', 'ê°ë™ì ì´ë‹¤');
-INSERT INTO movie VALUES(10002, 'ì•„ì´ì–¸ë§¨', 01, 120, '3.jpg', 'ë©‹ìˆë‹¤');
-INSERT INTO movie VALUES(10003, 'ê²¨ìš¸ì™•êµ­2', 05, 130, '4.jpg', 'ì¬ë°Œë‹¤');
-INSERT INTO movie VALUES(10004, 'ì—‘ì‹œíŠ¸', 03, 140, '5.jpg', 'í‚¬ë§íƒ€ì„');
-INSERT INTO movie VALUES(10005, 'ë°˜ë„', 04, 155, '6.jpg', 'ì˜ìƒê²¼ë‹¤');
-INSERT INTO movie VALUES(10006, '23ì•„ì´ë´í‹°ë””', 04, 150, '7.jpg', 'ê¿€ì¼');
 
 CREATE TABLE MEMBER(
-	id VARCHAR2(20) PRIMARY KEY, --ì•„ì´ë””
-	pw VARCHAR2(20), --ë¹„ë°€ë²ˆí˜¸
-	email VARCHAR2(50), --ì´ë©”ì¼
-	tel VARCHAR2(20), --ì „í™”ë²ˆí˜¸
-	birth DATE --ìƒë…„ì›”ì¼
+   id VARCHAR2(20) PRIMARY KEY, --¾ÆÀÌµğ
+   pw VARCHAR2(20), --ºñ¹Ğ¹øÈ£
+   email VARCHAR2(50), --ÀÌ¸ŞÀÏ
+   tel VARCHAR2(20), --ÀüÈ­¹øÈ£
+   birth DATE --»ı³â¿ùÀÏ
 );
 
-insert into member values('test','1234','test@test.com','010-1234-1234','2002-05-12');
-
-CREATE TABLE SCHEDULE( --ìƒì˜ê´€(ROOM) --ê´€ëŒì‹œê°„ ì˜í™”ê´€ì´ë‘ ì—°ê²°í•´ì£¼ëŠ” í…Œì´ë¸”
-	schNo NUMBER PRIMARY KEY, --ìŠ¤ì¼€ì¤„ ë²ˆí˜¸
-	movieName varchar2(20),
-    movieNo NUMBER, -- ì˜í™” ë²ˆí˜¸
-	runDay DATE, --ìƒì˜ ë‚ ì§œ
-	runtime NUMBER, --ìƒì˜ ì‹œê°„ : ëª‡ë¶„ì§œë¦¬ ì˜í™”ì¸ì§€
-	roomNo NUMBER, -- ìƒì˜ê´€ ë²ˆí˜¸
-    CONSTRAINT FK_movieNo foreign key(movieNo) REFERENCES movie(movieNo)
+CREATE TABLE movie(
+   movieNo number primary key, 
+   movieName VARCHAR2(100), 
+   category number, 
+   runtime number, 
+   img VARCHAR2(300), 
+   info VARCHAR2(200) 
 );
 
-insert into schedule values(1, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 11:50','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(2, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 13:50','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(3, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 15:10','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(4, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 20:50','yyyy/mm/dd hh24:mi'),120,1);
-insert into schedule values(5, 'ì–´ë²¤ì €ìŠ¤',10000,TO_DATE('2022/07/29 21:50','yyyy/mm/dd hh24:mi'),120,1);
-
-insert into schedule values(6, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 11:50','yyyy/mm/dd hh24:mi'),120,2);
-insert into schedule values(7, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 14:50','yyyy/mm/dd hh24:mi'),120,2);
-insert into schedule values(8, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 17:00','yyyy/mm/dd hh24:mi'),120,2);
-insert into schedule values(9, 'ì•„ì´ì–¸ë§¨',10002,TO_DATE('2022/08/01 20:50','yyyy/mm/dd hh24:mi'),120,2);
-
-insert into schedule values(10, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 09:50','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(11, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 12:30','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(12, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 15:50','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(13, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 18:00','yyyy/mm/dd hh24:mi'),120,3);
-insert into schedule values(14, 'ë…¸íŒ…í',10001,TO_DATE('2022/07/29 21:30','yyyy/mm/dd hh24:mi'),120,3);
-
-insert into schedule values(15, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 10:00','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(16, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 12:40','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(17, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 15:00','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(18, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 18:30','yyyy/mm/dd hh24:mi'),130,4);
-insert into schedule values(19, 'ê²¨ìš¸ì™•êµ­2',10003,TO_DATE('2022/07/29 22:20','yyyy/mm/dd hh24:mi'),130,4);
-
-insert into schedule values(20, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 09:30','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(21, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 12:00','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(22, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 14:20','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(23, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 18:10','yyyy/mm/dd hh24:mi'),140,5);
-insert into schedule values(24, 'ì—‘ì‹œíŠ¸',10004,TO_DATE('2022/07/29 23:00','yyyy/mm/dd hh24:mi'),140,5);
-
-insert into schedule values(25, 'ë°˜ë„',10005,TO_DATE('2022/07/29 09:40','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(26, 'ë°˜ë„',10005,TO_DATE('2022/07/29 12:50','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(27, 'ë°˜ë„',10005,TO_DATE('2022/07/29 16:20','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(28, 'ë°˜ë„',10005,TO_DATE('2022/07/29 19:50','yyyy/mm/dd hh24:mi'),155,6);
-insert into schedule values(29, 'ë°˜ë„',10005,TO_DATE('2022/07/29 23:10','yyyy/mm/dd hh24:mi'),155,6);
-
-insert into schedule values(30, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 08:10','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(31, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 11:10','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(32, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 15:00','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(33, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 18:30','yyyy/mm/dd hh24:mi'),150,7);
-insert into schedule values(34, '23ì•„ì´ë´í‹°ë””',10006,TO_DATE('2022/07/29 23:00','yyyy/mm/dd hh24:mi'),150,7);
-
-
-
-CREATE TABLE ROOM( --ìƒì˜ê´€
-    roomNo NUMBER primary key --ìƒì˜ê´€ ë²ˆí˜¸
-);
-
-insert into room values(1);
-insert into room values(2);
-insert into room values(3);
-insert into room values(4);
-insert into room values(5);
-insert into room values(6);
-insert into room values(7);
-
-create table DayRoom(
-    roomNo number,
-    schNo number,
-    seatCnt number default 0,
-    CONSTRAINT FK_roomNo foreign key(roomNo) REFERENCES room(roomNo)
-);
-
-insert into Dayroom values(1,1,0);
-insert into Dayroom values(1,2,0);
-insert into Dayroom values(1,3,0);
-insert into Dayroom values(1,4,0);
-insert into Dayroom values(1,5,0);
-
-insert into Dayroom values(2,6,0);
-insert into Dayroom values(2,7,0);
-insert into Dayroom values(2,8,0);
-insert into Dayroom values(2,9,0);
-
-insert into Dayroom values(3,10,0);
-insert into Dayroom values(3,11,0);
-insert into Dayroom values(3,12,0);
-insert into Dayroom values(3,13,0);
-insert into Dayroom values(3,14,0);
-
-insert into Dayroom values(4,15,0);
-insert into Dayroom values(4,16,0);
-insert into Dayroom values(4,17,0);
-insert into Dayroom values(4,18,0);
-insert into Dayroom values(4,19,0);
-
-insert into Dayroom values(5,20,0);
-insert into Dayroom values(5,21,0);
-insert into Dayroom values(5,22,0);
-insert into Dayroom values(5,23,0);
-insert into Dayroom values(5,24,0);
-
-insert into Dayroom values(6,25,0);
-insert into Dayroom values(6,26,0);
-insert into Dayroom values(6,27,0);
-insert into Dayroom values(6,28,0);
-insert into Dayroom values(6,29,0);
-
-insert into Dayroom values(7,30,0);
-insert into Dayroom values(7,31,0);
-insert into Dayroom values(7,32,0);
-insert into Dayroom values(7,33,0);
-insert into Dayroom values(7,34,0);
-
-
-CREATE TABLE TICKET(
-	ticketNo NUMBER PRIMARY KEY, --í‹°ì¼“ ë²ˆí˜¸
-	movieName varchar2(20), -- ì˜í™” ì´ë¦„
-	bookDate DATE, -- ìƒì˜í•˜ëŠ” ë‚ ì§œ
-	schNo NUMBER, --ìŠ¤ì¼€ì¤„ ë²ˆí˜¸
-	roomNo number, --ìƒì˜ê´€
-	seatNo NUMBER, --ë‚´ê°€ ì„ íƒí•œ ì¢Œì„ ë²ˆí˜¸
-	id VARCHAR2(20) --íšŒì›ì•„ì´ë””
-);
 create table reviews(
     num number(8) default 0,
     id varchar2(20),
-    content varchar2(200),
+    content varchar2(200) NOT NULL,
     movieNo number(8),
+    score number(15) DEFAULT 0,
     writedate Date
 );
 
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10000,
+'½ÖÈ­Á¡',
+2,
+120,
+'https://w.namu.la/s/6f1ee7e71b0355ce7983a100f67b8f62111a16a37d79dfe1b1b1719735d5dd6515ab5928f8a9e347a9ce5e90aa0fe1012f337047478829cacfc7921390b5656473c8591b19009f1e420bad3a8d8c725fdabb892d380c0baf32e2e2c543a9cc5751da3c70022716b2f203d4d472427bb0',
+'¾ßÇÔ'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10001,
+'¹üÁËµµ½Ã',
+1,
+121,
+'https://w.namu.la/s/5c57ebe049d9678ff7159dbb3184cdaf8e05f4d4c04c9b52c622ece7c460304d8d5ca2eb2348557ae591adb5840d5fcef183b38d96e3e60c19ec76a0a15e86e6361e08f63c1a4c132f44dc732b1ab7d7049238e8bf6fc0536718ac3686debfb24f396c4aedcd80cc4fb533d5e74f27f6',
+'ÅëÄèÇÏ°í! È­²öÇÏ°í! »ì¹úÇÏ°Ô! ³ª»Û ³ğµé ¶§·ÁÀâ´Â °­·Â¹İ Çü»çµéÀÇ ¡®Á¶Æø ¼ÒÅÁ ÀÛÀü¡¯ÀÌ ½ÃÀÛµÈ´Ù!'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10002,
+'º£Å×¶û',
+1,
+124,
+'https://w.namu.la/s/1d6ed89b28e72ddd439b36d69582ecd36f6461094c1cf8de9f92169c6beb22039647293e8c30725dd6093c50da02c48403ceaddf617b45962dcfad60bec33717e6775726ade603ff4075b24fea72790195bc6e72b41a27cf061c363f7e89d1073e27fb09a7ea5af164293c0fa2cadac3',
+'º£Å×¶û ±¤¿ª¼ö»ç´ë VS À¯¾Æµ¶Á¸ Àç¹ú 3¼¼, ÀÚÁ¸½ÉÀ» °Ç ÇÑÆÇ ´ë°áÀÌ ½ÃÀÛµÈ´Ù!'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10003,
+'°ÇÃàÇĞ°³·Ğ',
+2,
+118,
+'https://w.namu.la/s/c5cbdb11e56d71d8b79e696b2d0d2481b9ae4ee10257e96b82187d3b094120e778c3f16a3c16bb86c38c09283ca09c02555f6d22ea3a05e8d8460c6f715176636cb161f0aef77ec5041f4f722cf68d3cac7d603ffd0e9b2d1be64afae812110c4158da85db150558a478d1ab021deca1',
+'±¹¹Î Ã¹»ç¶ûÀÌ µ¹¾Æ¿Ô´Ù! ´ŞÄŞ½Ô½Î¸§ÇÑ »ç¶ûÀÌ¾ß±â'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10004,
+'Ã»³â°æÂû',
+3,
+109,
+'https://w.namu.la/s/43a077a95ca17c5cb84ea8624ce78f17a201c658faaf4e10fcbe40846b739f1efe974074e583a4d37a51c85426a757305d05df0f3fc53a45eedec77a0609e2aeb41cc3db2b3e3415b18c0ee0dfae8c9c43dd1fd90d235e6d503b93460c985f999e422604326d45e5338921084934764b',
+'¹ÏÀ» °ÍÀÌ¶ó°ï ÁÖ¸Ô°ú ÀşÀ½ »ÓÀÎ µÎ °æÂû´ë»ıÀÌ ´«¾Õ¿¡¼­ ¸ñ°İÇÑ ³³Ä¡»ç°Ç¿¡ ÈÖ¸»¸®¸é¼­ ¹ú¾îÁö´Â ÀÌ¾ß±â'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10005,
+'½º¹°',
+3,
+115,
+'https://w.namu.la/s/5b663b0963a60094e8fadbc12b62915bbb9b5b1f72d4d3cff528ee96c0e39c9e3401452f3c19881b83740219cb8a8a15fe3aec5e997e1aec57fbd1ab3fa5a797c57002ca68edbabc2ac0ee04ac6efaf7391339699a75f8c36ad9ba4d2aff453afedd48ccc6a3ad6472789cc51164bebe',
+'¹ÏÀ» °ÍÀÌ¶ó°ï ÁÖ¸Ô°ú ÀşÀ½ »ÓÀÎ µÎ °æÂû´ë»ıÀÌ ´«¾Õ¿¡¼­ ¸ñ°İÇÑ ³³Ä¡»ç°Ç¿¡ ÈÖ¸»¸®¸é¼­ ¹ú¾îÁö´Â ÀÌ¾ß±â'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10006,
+'´õ ÇÃ·§Æû',
+4,
+94,
+'https://w.namu.la/s/4144604e3586b013a36aca8d9d18272ac64ff474abc642d7d97d8abd3175c4699997bd0424024fab1fa8e787d19fd57292b75804f069579b8c5952de4aa9ad6f6fa945315c994216bce36deeadb32ae400cb843e6f5a85a37107e783fdccc647551279d1ef4a1ba78b0741e2fe24e1a3',
+'30ÀÏ¸¶´Ù ·£´ıÀ¸·Î ·¹º§ÀÌ ¹Ù²î´Â ±ØÇÑ »ıÁ¸ÀÇ ¼öÁ÷ °¨¿Á ÃÖ»óÀ§ ·¹º§ 0¿¡¼­ ¾Æ·¡·Î ³»·Á°¥¼ö·Ï À½½Äµµ ÀÎ°£¼ºµµ ¹Ù´Ú³ª´Âµ¥¡¦'
+);
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10007,
+'¼¾°ú Ä¡È÷·ÎÀÇ Çà¹æºÒ¸í',
+5,
+126,
+'https://w.namu.la/s/05bb6389be97a3eeab64cc747ce3ed780774d6692b0feb5b42d7cf1a1fee21380fce9088c25e9111aa56a66f1bb73b3b50530221c0e206500ad246e4c49ffe6457a4f1555f8236786bece665dffb0db3725f131612e2d50d8a73d8b4817b09a4571dd92152a5346368b4af1ebb43404f',
+'ÅÍ³ÎÀÇ ÀúÆíÀº, ½ÅºñÇÑ ¸¶À»ÀÌ¾ú½À´Ï´Ù.'
+);
+
+insert into movie
+(
+movieno,
+moviename,
+category,
+runtime,
+img,
+info
+)
+VALUES
+(
+10008,
+'±Í¸êÀÇ Ä®³¯: ¹«ÇÑ¿­Â÷Æí',
+5,
+117,
+'https://w.namu.la/s/0239cd770651e4255e0de336abbd3406c152e301af94a1c9188ede6aabc991cabf5b0de6d3b79da7878b01350f482e77c8491302bf165a75f08e1ae4cfa7c49557043f26dc5d9dbdaaee7c0c1a17e59b6df56369fe04007af571f8e75b27b8b72a11a12b4e9a9c7b427b9b122da4799b',
+'°¨µ¿ÀûÀÌ°í Èï¹ÌÁøÁøÇÑ ¾Ö´Ï¸ŞÀÌ¼Ç'
+);
 
 commit;
-
-SELECT * FROM dayroom;
-SELECT * FROM movie;
-select * from room;
-select * from schedule;
-select * from ticket;
-select * from reviews;
-select * from member;
-
