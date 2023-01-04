@@ -1,0 +1,2 @@
+노션 : https://www.notion.so/Team-Project2-JSP-Servlet-7d9ccda796374559b5cb2306afd2187c
+깃허브 : https://github.com/Minjeong204/project_bookrec/releases/tag/release-1.0

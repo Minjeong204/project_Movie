@@ -3,7 +3,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page session="true" %>
-<link rel="stylesheet" href="/lib/list.css?after">
+<%-- <%@ link rel="icon" href="data:;base64,iVBORw0KGgo=" %> --%>
+<link rel="stylesheet" href="/lib/list.css">
  <script src="../lib/jquery-3.6.1.min.js"></script> 
 <script src="../lib/jquery-1.8.3.min.js"></script>
 <script src="../lib/jquery-ui-1.10.4.custom.min.js"></script>
@@ -30,9 +31,9 @@
             <li class="no_1" data-n="1"><a href="#"><img src="https://img.newspim.com/news/2020/04/13/2004130813526320.jpg" alt="럭 포스터" width="688" height="387"></a></li>
             <li class="no_2" data-n="2"><a href="#"><img src="https://image.kmib.co.kr/online_image/2022/0107/2022010620211463553_1641468075_0924226465.jpg" alt="테드 래소 포스터" width="688" height="387"></a></li>
             <li class="no_3" data-n="3"><a href="#"><img src="https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202211/04/tvdaily/20221104093722155qeis.jpg" alt="DR.브레인 포스터" width="688" height="387"></a></li>
-            <!-- <li class="no_4" data-n="4"><a href="#"><img src="http://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/09/29/21c8e0c9-b498-4595-9ca4-5579a95221c2.jpg" alt="인베이션 포스터" width="688" height="387"></a></li>
-            <li class="no_5" data-n="5"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUJQfG8lpVdxBnvZKeHbNiWSFFQgYqQNTkQ&usqp=CAU" alt="세브란스:단절 포스터" width="688" height="387"></a></li>
-            <li class="no_6" data-n="6"><a href="#"><img src="https://img.asiatoday.co.kr/file/2022y/08m/15d/2022081501001398400084201.jpg" alt="SEE 어둠의 나날 포스터" width="688" height="387"></a></li> -->
+            <li class="no_4" data-n="4"><a href="#"><img src="http://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2022/09/29/21c8e0c9-b498-4595-9ca4-5579a95221c2.jpg" alt="인베이션 포스터" width="688" height="387"></a></li>
+          	<li class="no_5" data-n="5"><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUJQfG8lpVdxBnvZKeHbNiWSFFQgYqQNTkQ&usqp=CAU" alt="세브란스:단절 포스터" width="688" height="387"></a></li>
+            <li class="no_6" data-n="6"><a href="#"><img src="https://img.asiatoday.co.kr/file/2022y/08m/15d/2022081501001398400084201.jpg" alt="SEE 어둠의 나날 포스터" width="688" height="387"></a></li>
           </ul>
         </div>
       </div>
@@ -117,7 +118,7 @@
 
 		$(".atv:not(:animated)").animate({
 			marginLeft : parseInt($(".atv").css("margin-left")) - 688 + "px"
-		}, "slow", "swing", function() {
+		}, 2000, "swing", function() {
 			$(".atv li:first").appendTo(".atv");
 			$(".atv").css("margin-left", "-688px");
 			var n = $(".atv li").attr("data-n");
@@ -138,10 +139,10 @@
 						
 						// 포스터 자동슬라이드
 						// var li_w = $(".atv li").width();
-						var w = 690 * $(".atv li").length + "px";
+						var w = 688 * $(".atv li").length + "px";
 						$(".atv").css("width", w);
 						$(".atv li:last").prependTo(".atv");
-						$(".atv").css("margin-left", "-690px");
+						$(".atv").css("margin-left", "-688px");
 
 						$("#appletv_post").addClass("bg1");
 
@@ -151,13 +152,13 @@
 											{
 												marginLeft : parseInt($(".atv")
 														.css("margin-left"))
-														- 690 + "px"
+														- 688 + "px"
 											},
 											function() {
 												$(".atv li:first").appendTo(
 														".atv");
 												$(".atv").css("margin-left",
-														"-690px")
+														"-688px")
 
 												var n = $(".atv li").attr(
 														"data-n");
@@ -179,13 +180,13 @@
 											{
 												marginLeft : parseInt($(".atv")
 														.css("margin-left"))
-														+ 690 + "px"
+														+ 688 + "px"
 											},
 											function() {
 												$(".atv li:last").prependTo(
 														".atv");
 												$(".atv").css("margin-left",
-														"-690px");
+														"-688px");
 
 												var n = $(".atv li").attr(
 														"data-n");
@@ -201,27 +202,27 @@
 												});
 											});
 								});
-						var banner = setInterval("banner()", 3000);
+						var banner = setInterval("banner()", 200);
 
 						$(".atv li").mouseover(function() {
 							clearInterval(banner);
 							$(this).find("img").css("opacity", "0.5");
 						}).mouseout(function() {
-							banner = setInterval("banner()", 3000);
+							banner = setInterval("banner()", 200);
 							$(this).find("img").css("opacity", "1.0");
 						});
 						$(".next").mouseover(function() {
 							clearInterval(banner);
 							$(this).find("img").css("opacity", "0.5");
 						}).mouseout(function() {
-							banner = setInterval("banner()", 3000);
+							banner = setInterval("banner()", 200);
 							$(this).find("img").css("opacity", "1.0");
 						});
 						$(".prev").mouseover(function() {
 							clearInterval(banner);
 							$(this).find("img").css("opacity", "0.5");
 						}).mouseout(function() {
-							banner = setInterval("banner()", 3000);
+							banner = setInterval("banner()", 200);
 							$(this).find("img").css("opacity", "1.0");
 						});
 

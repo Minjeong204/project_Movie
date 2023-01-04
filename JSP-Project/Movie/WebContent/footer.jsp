@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="/lib/style.css?after">
+<link rel="stylesheet" href="/lib/style.css">
 <div id="bottom_wrap">
     <footer id="bottom">
       <ul>

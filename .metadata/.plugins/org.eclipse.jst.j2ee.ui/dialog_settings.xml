@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="J2EE_EXPORT_OVERWRITE" value="false"/>
+	<item key="J2EE_EXPORT_SOURCE" value="false"/>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="C:\Users\Yoo. MH\Desktop\배포판\MovieMVC.war"/>
+		<item value="C:\Users\Yoo. MH\Downloads\apache-tomcat-9.0.70\webapps\MovieMVC.war"/>
+	</list>
+</section>

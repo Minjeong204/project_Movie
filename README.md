@@ -178,7 +178,9 @@
 <br>
 <br>
 
+`Notion` : https://www.notion.so/Team-Project2-JSP-Servlet-7d9ccda796374559b5cb2306afd2187c
 ```
 메모란
 
 ```
+

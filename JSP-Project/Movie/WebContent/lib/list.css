@@ -31,7 +31,7 @@
 }
 
 .appletv_post_con{
-  width:1000px;
+  width: 1000px;
   height:388px;
   margin:0 auto;
   position:relative;
@@ -48,11 +48,15 @@
   width:688px;
   height:387px;
 }
-.atv li{
-  width:688px;
+.atv li  {
+  width:688px !important;
   height:387px;
   float:left;
   text-align: center;
+}
+.atv li > img {
+  width:688px !important;
+  height:387px;
 }
 
 .appletv_post_abridg h1:nth-of-type(1){
