@@ -25,7 +25,8 @@
 ---
 
 ## [**FRONT-END**]
-
+Figma Link
+https://www.figma.com/file/10ATGkEs9EkShW6XQtRJBH/Untitled?node-id=0%3A1&t=slRyIRVpBlKhiS6m-0
 <br>
 
 #### [ver_0]
