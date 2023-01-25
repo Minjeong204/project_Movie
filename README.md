@@ -175,6 +175,10 @@ https://www.figma.com/file/10ATGkEs9EkShW6XQtRJBH/Untitled?node-id=0%3A1&t=slRyI
 
 ◾ 리뷰 메인 & 서브 기능 - UI(view) 및 동작 오류 확인
   - 리뷰 기능 전체적인 버그 수정
+  
+![image](https://user-images.githubusercontent.com/97210509/214522004-ed456541-cacf-49d3-8660-daacf9635968.png)
+![image](https://user-images.githubusercontent.com/97210509/214522023-e3a9f253-611d-4249-a5df-3e04d07e2056.png)
+
 
 ---
 ---
@@ -182,6 +186,9 @@ https://www.figma.com/file/10ATGkEs9EkShW6XQtRJBH/Untitled?node-id=0%3A1&t=slRyI
 ## [**Main**]
 
 <br>
+![image](https://user-images.githubusercontent.com/97210509/214521921-1722f3e0-2983-4413-9a85-547177493509.png)
+![image](https://user-images.githubusercontent.com/97210509/214521947-31725a02-cf6a-4b5e-8395-a148865f4345.png)
+
 
 #### [release-0]
 
