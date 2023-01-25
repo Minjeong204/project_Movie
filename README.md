@@ -186,7 +186,10 @@ https://www.figma.com/file/10ATGkEs9EkShW6XQtRJBH/Untitled?node-id=0%3A1&t=slRyI
 ## [**Main**]
 
 <br>
+
 ![image](https://user-images.githubusercontent.com/97210509/214521921-1722f3e0-2983-4413-9a85-547177493509.png)
+<br>
+
 ![image](https://user-images.githubusercontent.com/97210509/214521947-31725a02-cf6a-4b5e-8395-a148865f4345.png)
 
 
