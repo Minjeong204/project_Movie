@@ -23,11 +23,30 @@
 > - taglibs-standard-compat-1.2.5.jar
  
 ---
+## 요구사항 명세서
+![image](https://user-images.githubusercontent.com/97210509/214520248-73aefee2-dba1-496d-837a-9780da59d29a.png)
+
+## 다이어그램
+
+### 유스케이스 다이어그램
+![image](https://user-images.githubusercontent.com/97210509/214520341-905c2cc9-89ca-4d7c-84fe-81222e4e8386.png)
+
+### 클래스 다이어그램
+![image](https://user-images.githubusercontent.com/97210509/214520393-2c56de80-44b9-4bcb-9159-3d7eb82174fc.png)
+
+### 시퀀스 다이어그램
+![image](https://user-images.githubusercontent.com/97210509/214520498-b2f12ceb-8dec-47d1-8f3a-2365fd5501c6.png)
+
+### ER다이어그램
+![image](https://user-images.githubusercontent.com/97210509/214520573-709d736c-68f2-4921-85f1-bde4a94c9203.png)
+
 
 ## [**FRONT-END**]
 Figma Link
 https://www.figma.com/file/10ATGkEs9EkShW6XQtRJBH/Untitled?node-id=0%3A1&t=slRyIRVpBlKhiS6m-0
 <br>
+
+## [**BACK-END**]
 
 #### [ver_0]
 
